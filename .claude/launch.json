@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "voxmax-next",
+      "runtimeExecutable": "/Users/mac/.nvm/versions/node/v24.14.1/bin/node",
+      "runtimeArgs": ["node_modules/.bin/next", "dev"],
+      "env": {
+        "PATH": "/Users/mac/.nvm/versions/node/v24.14.1/bin:/usr/local/bin:/usr/bin:/bin"
+      },
+      "port": 3000,
+      "autoPort": true
+    }
+  ]
+}

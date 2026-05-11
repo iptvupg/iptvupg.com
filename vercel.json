@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "iptvupg.com" }],
+      "destination": "https://www.iptvupg.com/:path*",
+      "permanent": true
+    }
+  ]
+}
