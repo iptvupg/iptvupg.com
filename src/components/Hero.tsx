@@ -37,10 +37,10 @@ export default function Hero() {
         </h1>
 
         <p className="mx-auto mb-8 max-w-[680px] text-[15px] leading-relaxed text-text-secondary">
-          IPTV UPG is a premium IPTV subscription that streams 24,000+ live TV channels
-          and 120,000+ on-demand movies in 4K/UHD over your internet connection — no
-          cable box, no contract, no buffering. Activated in under 60 seconds on any
-          device you already own.
+          IPTV UPG is the <strong className="font-semibold text-text-primary">best IPTV service</strong>{" "}
+          for 2026 — a premium IPTV subscription that streams 24,000+ live TV channels and
+          120,000+ on-demand movies in 4K/UHD over your internet connection. No cable box,
+          no contract, no buffering. Activated in under 60 seconds on any device you already own.
         </p>
 
         <div className="mb-6 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5">

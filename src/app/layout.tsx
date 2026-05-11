@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | IPTV UPG",
   },
   description:
-    "#1 IPTV service for 2026. 24,000+ live channels & 120,000+ movies in 4K. Free trial, instant activation, plans from $7.50/mo. 7-day money-back guarantee.",
+    "Best IPTV Service of 2026 — IPTV UPG streams 24,000+ live channels & 120,000+ movies in 4K. Free trial, instant activation, plans from $7.50/mo. 7-day money-back guarantee.",
   authors: [{ name: "IPTV UPG" }],
   creator: "IPTV UPG",
   publisher: "IPTV UPG",

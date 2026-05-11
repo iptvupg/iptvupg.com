@@ -20,11 +20,13 @@ export default function WhatIsIPTV() {
             <strong className="font-semibold text-text-primary">IPTV</strong>{" "}
             (Internet Protocol Television) is a method of streaming live TV channels
             and on-demand video over the internet instead of through cable, satellite,
-            or terrestrial signals. With an IPTV service like{" "}
-            <strong className="font-semibold text-text-primary">IPTV UPG</strong>, you
+            or terrestrial signals. With the{" "}
+            <strong className="font-semibold text-text-primary">best IPTV service</strong>{" "}
+            of 2026 —{" "}
+            <strong className="font-semibold text-text-primary">IPTV UPG</strong> — you
             get the same live sports, news, movies, and international channels you&apos;d
-            get from cable — but delivered in 4K, on any device (Smart TV, phone, Fire
-            Stick, Apple TV), for up to{" "}
+            get from cable, but delivered in 4K on any device (Smart TV, phone, Fire
+            Stick, Apple TV) for up to{" "}
             <span className="font-semibold text-accent">80% less</span> than a
             traditional cable bill. Setup takes under a minute: subscribe, install a
             free IPTV player, log in, and start watching.
