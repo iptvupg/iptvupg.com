@@ -18,6 +18,7 @@ export default function Footer() {
               <div className="flex flex-col gap-2">
                 <Link href="/best-iptv-service" className="text-sm text-text-secondary transition-colors hover:text-text-primary">Why Choose Us</Link>
                 <Link href="/iptv-free-trial" className="text-sm text-text-secondary transition-colors hover:text-text-primary">Free Trial</Link>
+                <Link href="/iptv-subscription" className="text-sm text-text-secondary transition-colors hover:text-text-primary">All Subscription Plans</Link>
                 <Link href="/1-month-iptv-subscription" className="text-sm text-text-secondary transition-colors hover:text-text-primary">1 Month — $16</Link>
                 <Link href="/3-months-iptv-subscription" className="text-sm text-text-secondary transition-colors hover:text-text-primary">3 Months — $39</Link>
                 <Link href="/6-months-iptv-subscription" className="text-sm text-text-secondary transition-colors hover:text-text-primary">6 Months — $60</Link>

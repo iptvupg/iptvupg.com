@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/iptv-free-trial`, lastModified: standardLastMod },
 
     // ── Subscription plans
+    { url: `${baseUrl}/iptv-subscription`, lastModified: pillarLastMod },
     { url: `${baseUrl}/12-months-iptv-subscription`, lastModified: standardLastMod },
     { url: `${baseUrl}/6-months-iptv-subscription`, lastModified: standardLastMod },
     { url: `${baseUrl}/3-months-iptv-subscription`, lastModified: standardLastMod },
