@@ -33,7 +33,7 @@ const articleSchema = {
   "@id": "https://www.iptvupg.com/best-iptv-service#article",
   headline: "Best IPTV Service in 2026 — Verified Comparison of Top IPTV Providers",
   datePublished: "2024-09-20",
-  dateModified: "2026-05-01",
+  dateModified: "2026-05-14",
   inLanguage: "en",
   author: {
     "@type": "Organization",
@@ -70,14 +70,6 @@ const productSchema = {
     highPrice: "16.00",
     offerCount: 4,
     url: "https://www.iptvupg.com/iptv-subscription",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    ratingCount: 6620,
-    reviewCount: 6620,
-    bestRating: "5",
-    worstRating: "1",
   },
 };
 
@@ -182,11 +174,10 @@ const tldrRows: { metric: string; upg: string; tier: string; budget: string }[] 
   { metric: "Price (annual)", upg: "$7.50/mo", tier: "$10–$15/mo", budget: "$3–$6/mo (risky)" },
 ];
 
-const ranking: { rank: string; name: string; tagline: string; pros: string[]; cons: string[]; price: string; verdict: string; badge?: string }[] = [
+const ranking: { name: string; tagline: string; pros: string[]; cons: string[]; price: string; verdict: string }[] = [
   {
-    rank: "01",
     name: "IPTV UPG",
-    tagline: "The best IPTV service in 2026 — and we have the data to back it.",
+    tagline: "Scorecard against the 12 criteria above — self-assessed, methodology disclosed in section 09.",
     pros: [
       "24,000+ live channels (largest verified catalog)",
       "120,000+ VOD titles in true 4K",
@@ -200,10 +191,10 @@ const ranking: { rank: string; name: string; tagline: string; pros: string[]; co
     cons: [
       "No 24-hour 'one-click' trial — must request via WhatsApp (5 minutes)",
       "Premium tier — not the cheapest at the very bottom of the market",
+      "Self-published scorecard — verify each claim yourself during the free trial",
     ],
     price: "From $7.50/mo (annual)",
-    verdict: "Wins on every measurable KPI. The default choice for anyone treating IPTV as a serious cable replacement.",
-    badge: "★ Editor's Choice",
+    verdict: "Strong across every KPI IPTV UPG tracks in its own monitoring. Run the free trial to verify on your network before committing.",
   },
 ];
 
@@ -409,10 +400,10 @@ export default function BestIptvService() {
                 Try Free for 24 Hours
               </a>
               <a
-                href="#ranking"
+                href="#scorecard"
                 className="rounded-xl border border-border-light px-10 py-4 text-sm font-bold tracking-[1px] uppercase text-text-primary transition-all hover:-translate-y-0.5 hover:border-accent/50"
               >
-                See the Ranking
+                See the Scorecard
               </a>
             </div>
             <div className="mt-7 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-text-muted">
@@ -507,37 +498,35 @@ export default function BestIptvService() {
             </div>
           </section>
 
-          {/* Ranking */}
-          <section id="ranking" className="mb-16">
+          {/* Self-scorecard */}
+          <section id="scorecard" className="mb-16">
             <div className="mb-6 inline-flex items-center gap-3 text-[11px] font-semibold tracking-[3px] uppercase text-accent">
               <span className="font-mono">04</span>
               <span className="h-px w-8 bg-accent/40" />
-              <span>The Ranking</span>
+              <span>IPTV UPG Self-Scorecard</span>
             </div>
             <h2 className="mb-5 text-[clamp(24px,3.4vw,34px)] font-black leading-tight">
-              Top IPTV Services in 2026 — Ranked by 12 Verified Metrics
+              How IPTV UPG Performs Against the 12 Criteria
             </h2>
-            <p className="mb-8 max-w-[720px] text-[15px] leading-relaxed text-text-secondary">
-              Each provider was scored across the 12 criteria in section 02 plus the 7 KPIs in section 08. Channel counts were verified by browsing the EPG during the free trial. 4K availability was confirmed by opening UHD channels and checking output resolution.
+            <p className="mb-4 max-w-[720px] text-[15px] leading-relaxed text-text-secondary">
+              This is IPTV UPG&apos;s self-assessment against the 12 criteria above. Channel counts are verified by browsing the EPG, 4K availability by opening UHD channels and confirming output resolution, uptime by an independent monitoring stack — all measurements come from IPTV UPG&apos;s production environment.
+            </p>
+            <p className="mb-8 max-w-[720px] rounded-xl border border-border bg-bg-card-hover/30 px-5 py-3 text-sm leading-relaxed text-text-muted">
+              <strong className="text-text-primary">Disclosure:</strong> This is a self-published scorecard, not a multi-provider editorial ranking. The methodology, KPIs, and pass thresholds are open (sections 02, 07, 08) — apply them to any provider you&apos;re evaluating, including IPTV UPG, using the free trial.
             </p>
             <div className="space-y-5">
-              {ranking.map((p, i) => (
-                <div key={p.rank} className={`rounded-[20px] border p-7 shadow-[0_4px_20px_rgba(0,0,0,0.25)] transition-all hover:-translate-y-0.5 ${i === 0 ? "border-accent bg-gradient-to-b from-accent/[0.06] to-bg-card ring-2 ring-accent/20" : "border-border bg-bg-card"}`}>
+              {ranking.map((p) => (
+                <div key={p.name} className="rounded-[20px] border border-accent/40 bg-gradient-to-b from-accent/[0.05] to-bg-card p-7 shadow-[0_4px_20px_rgba(0,0,0,0.25)]">
                   <div className="mb-4 flex flex-wrap items-center gap-3">
-                    <span className={`font-mono text-[28px] font-black ${i === 0 ? "text-accent" : "text-text-muted"}`}>
-                      #{p.rank}
-                    </span>
                     <h3 className="text-xl font-black text-text-primary">{p.name}</h3>
-                    {p.badge && (
-                      <span className="rounded-full bg-accent/15 px-3 py-1 text-[11px] font-bold tracking-[1.5px] uppercase text-accent">
-                        {p.badge}
-                      </span>
-                    )}
+                    <span className="rounded-full border border-border-light px-3 py-1 text-[11px] font-semibold tracking-[1.5px] uppercase text-text-muted">
+                      Self-assessment
+                    </span>
                   </div>
                   <p className="mb-4 text-sm leading-relaxed text-text-secondary">{p.tagline}</p>
                   <div className="grid gap-4 md:grid-cols-2">
                     <div>
-                      <div className="mb-2 text-[11px] font-bold tracking-[1.5px] uppercase text-accent">Pros</div>
+                      <div className="mb-2 text-[11px] font-bold tracking-[1.5px] uppercase text-accent">Strengths</div>
                       <ul className="space-y-1.5 text-sm leading-relaxed text-text-secondary">
                         {p.pros.map((pro) => (
                           <li key={pro} className="flex gap-2"><span className="text-accent">✓</span><span>{pro}</span></li>
@@ -545,7 +534,7 @@ export default function BestIptvService() {
                       </ul>
                     </div>
                     <div>
-                      <div className="mb-2 text-[11px] font-bold tracking-[1.5px] uppercase text-text-muted">Cons</div>
+                      <div className="mb-2 text-[11px] font-bold tracking-[1.5px] uppercase text-text-muted">Trade-offs &amp; caveats</div>
                       <ul className="space-y-1.5 text-sm leading-relaxed text-text-secondary">
                         {p.cons.map((con) => (
                           <li key={con} className="flex gap-2"><span className="text-text-muted">−</span><span>{con}</span></li>
@@ -560,24 +549,22 @@ export default function BestIptvService() {
                     </div>
                     <div className="text-sm italic text-text-muted">{p.verdict}</div>
                   </div>
-                  {i === 0 && (
-                    <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-                      <a
-                        href={WHATSAPP_TRIAL_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block rounded-xl bg-gradient-to-br from-accent to-accent-dark px-7 py-3 text-xs font-bold tracking-[2px] uppercase text-bg-primary shadow-[0_8px_32px_rgba(201,168,76,0.25)] transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_40px_rgba(201,168,76,0.35)]"
-                      >
-                        Try IPTV UPG Free
-                      </a>
-                      <Link
-                        href="/12-months-iptv-subscription"
-                        className="rounded-xl border border-border-light px-7 py-3 text-center text-xs font-bold tracking-[1px] uppercase text-text-primary transition-all hover:-translate-y-0.5 hover:border-accent/50"
-                      >
-                        Annual Plan — $7.50/mo
-                      </Link>
-                    </div>
-                  )}
+                  <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+                    <a
+                      href={WHATSAPP_TRIAL_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block rounded-xl bg-gradient-to-br from-accent to-accent-dark px-7 py-3 text-xs font-bold tracking-[2px] uppercase text-bg-primary shadow-[0_8px_32px_rgba(201,168,76,0.25)] transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_40px_rgba(201,168,76,0.35)]"
+                    >
+                      Verify with a Free Trial
+                    </a>
+                    <Link
+                      href="/12-months-iptv-subscription"
+                      className="rounded-xl border border-border-light px-7 py-3 text-center text-xs font-bold tracking-[1px] uppercase text-text-primary transition-all hover:-translate-y-0.5 hover:border-accent/50"
+                    >
+                      Annual Plan — $7.50/mo
+                    </Link>
+                  </div>
                 </div>
               ))}
             </div>

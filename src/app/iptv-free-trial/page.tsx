@@ -71,14 +71,6 @@ const productSchema = {
     availability: "https://schema.org/InStock",
     url: "https://www.iptvupg.com/iptv-free-trial",
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    ratingCount: 6620,
-    reviewCount: 6620,
-    bestRating: "5",
-    worstRating: "1",
-  },
 };
 
 const faqSchema = {
@@ -181,7 +173,7 @@ const tldrRows: { metric: string; upg: string; freeApps: string; cable: string }
 
 const timeline: { day: string; title: string; body: React.ReactNode }[] = [
   {
-    day: "Day 1",
+    day: "Day 1 (24-hour free trial)",
     title: "Activate & Smoke-Test (5 minutes)",
     body: (
       <ol className="mt-2 list-decimal space-y-1 pl-5">
@@ -189,6 +181,7 @@ const timeline: { day: string; title: string; body: React.ReactNode }[] = [
         <li>Receive credentials (server URL, username, password) within minutes.</li>
         <li>Install a free IPTV player — IPTV Smarters, TiviMate, or GSE Smart IPTV.</li>
         <li>Log in. Open one live channel. Confirm the IPTV stream loads in under 3 seconds.</li>
+        <li>Within 24 hours, decide whether to subscribe — Days 2–7 below run on a paid plan, protected by the 7-day money-back guarantee.</li>
       </ol>
     ),
   },
@@ -228,8 +221,8 @@ const timeline: { day: string; title: string; body: React.ReactNode }[] = [
   },
   {
     day: "Day 7",
-    title: "Decision Day",
-    body: "You've tested everything that determines whether an IPTV subscription is worth your money. If yes, the Annual Plan at $7.50/month is the most economical path. If no, you walk away — no card was charged, no data was kept.",
+    title: "Refund-Window Closes — Decide",
+    body: "Day 7 is your 7-day money-back guarantee deadline. If the service met expectations across Days 2–6, lock in the lowest per-month price with the Annual Plan at $7.50/month. If it didn't, contact support before midnight for a full no-questions refund — every paid plan ships with this guarantee.",
   },
 ];
 
@@ -488,13 +481,13 @@ export default function IptvFreeTrial() {
             <div className="mb-6 inline-flex items-center gap-3 text-[11px] font-semibold tracking-[3px] uppercase text-accent">
               <span className="font-mono">04</span>
               <span className="h-px w-8 bg-accent/40" />
-              <span>Day-by-Day Roadmap</span>
+              <span>Trial + Refund-Window Roadmap</span>
             </div>
             <h2 className="mb-5 text-[clamp(24px,3.4vw,34px)] font-black leading-tight">
-              Your IPTV Free Trial: A 7-Day Roadmap
+              Your 24-Hour Trial + 7-Day Refund-Window Evaluation Plan
             </h2>
             <p className="mb-8 max-w-[720px] text-[15px] leading-relaxed text-text-secondary">
-              Most users start watching within 5 minutes. But to <em>truly evaluate</em> whether an IPTV service is right for you, run this 7-day testing framework. It covers every quality dimension professional reviewers use.
+              The free trial is <strong className="font-semibold text-text-primary">24 hours</strong> — long enough to confirm the basics. To <em>fully</em> evaluate the service, treat <strong className="font-semibold text-text-primary">Day 1 as your free trial</strong> (no credit card needed) and <strong className="font-semibold text-text-primary">Days 2–7 as your 7-day money-back guarantee window</strong> after subscribing. If at any point during the first 7 paid days the service doesn&apos;t meet expectations, contact support for a no-questions-asked refund.
             </p>
             <ol className="relative space-y-5 border-l border-accent/30 pl-6">
               {timeline.map((step, i) => (

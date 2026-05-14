@@ -172,14 +172,6 @@ const structuredData = {
           },
         },
       ],
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        bestRating: "5",
-        worstRating: "1",
-        ratingCount: 6620,
-        reviewCount: 6620,
-      },
       review: [
         {
           "@type": "Review",

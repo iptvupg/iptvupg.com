@@ -106,8 +106,8 @@ export default function AndroidIptv() {
                 offers: {
                   "@type": "AggregateOffer",
                   priceCurrency: "USD",
-                  lowPrice: 16,
-                  highPrice: 90,
+                  lowPrice: "16.00",
+                  highPrice: "90.00",
                   offerCount: 4,
                   url: "https://www.iptvupg.com/iptv-subscription",
                 },
