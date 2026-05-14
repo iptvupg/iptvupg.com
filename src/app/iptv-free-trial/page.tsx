@@ -105,7 +105,7 @@ const faqSchema = {
       name: "How long does the IPTV UPG free trial last?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Long enough to fully evaluate the service — every channel, the full 4K library, the EPG, peak-hour stability, and 24/7 support — on your own devices and your own network.",
+        text: "24 hours. The free trial gives you a full day of unrestricted access to every channel, the complete 4K VOD library, the EPG, and 24/7 support — long enough to test peak-hour stability on your own devices and your own network. If you want a longer evaluation, the 1-month plan ($16) is the lowest-commitment paid tier and is backed by a 7-day money-back guarantee.",
       },
     },
     {
@@ -287,7 +287,11 @@ const faqs: { q: string; a: React.ReactNode }[] = [
   },
   {
     q: "How long does the IPTV UPG free trial last?",
-    a: "Long enough to fully evaluate the service — every channel, the full 4K library, the EPG, peak-hour stability, and 24/7 support — on your own devices and your own network.",
+    a: (
+      <>
+        <strong className="text-text-primary">24 hours.</strong> A full day of unrestricted access to every channel, the complete 4K VOD library, the EPG, and 24/7 support — long enough to test peak-hour stability on your own devices and your own network. If you want a longer evaluation window, the <Link href="/1-month-iptv-subscription" className="font-semibold text-accent hover:underline">1-month plan ($16)</Link> is the lowest-commitment paid tier and is backed by a 7-day money-back guarantee.
+      </>
+    ),
   },
   {
     q: "What's the difference between a free IPTV trial and a free IPTV app?",

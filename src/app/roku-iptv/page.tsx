@@ -34,8 +34,9 @@ const techArticleSchema = {
   description: "Step-by-step guide to watching IPTV on Roku devices. Learn how to sideload IPTV Smarters and use screen mirroring for 24,000+ live channels with IPTV UPG.",
   image: ["https://www.iptvupg.com/opengraph-image"],
   inLanguage: "en-US",
+  proficiencyLevel: "Beginner",
   datePublished: "2026-04-06",
-  dateModified: "2026-04-06",
+  dateModified: "2026-05-14",
   author: { "@id": "https://www.iptvupg.com/#organization" },
   publisher: { "@id": "https://www.iptvupg.com/#organization" },
   mainEntityOfPage: {
@@ -46,6 +47,7 @@ const techArticleSchema = {
 
 const faqSchema = {
   "@type": "FAQPage",
+  "@id": "https://www.iptvupg.com/roku-iptv#faq",
   mainEntity: [
     {
       "@type": "Question",
@@ -90,7 +92,28 @@ export default function RokuIptv() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": [breadcrumbSchema, techArticleSchema, faqSchema],
+            "@graph": [
+              breadcrumbSchema,
+              techArticleSchema,
+              {
+                "@type": "Service",
+                "@id": "https://www.iptvupg.com/roku-iptv#service",
+                name: "IPTV UPG on Roku",
+                serviceType: "IPTV Streaming Service",
+                provider: { "@id": "https://www.iptvupg.com/#organization" },
+                areaServed: ["US", "GB", "CA", "AU"],
+                url: "https://www.iptvupg.com/roku-iptv",
+                offers: {
+                  "@type": "AggregateOffer",
+                  priceCurrency: "USD",
+                  lowPrice: 16,
+                  highPrice: 90,
+                  offerCount: 4,
+                  url: "https://www.iptvupg.com/iptv-subscription",
+                },
+              },
+              faqSchema,
+            ],
           }),
         }}
       />

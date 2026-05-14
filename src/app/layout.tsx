@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  display: "optional",
+  display: "swap",
   fallback: ["system-ui", "-apple-system", "sans-serif"],
 });
 

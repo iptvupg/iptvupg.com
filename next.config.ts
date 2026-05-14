@@ -98,9 +98,9 @@ const nextConfig: NextConfig = {
           },
         ],
       },
-      // AI crawler-friendly headers for llms.txt
+      // AI crawler-friendly headers for llms.txt / llms-full.txt
       {
-        source: "/llms.txt",
+        source: "/:file(llms\\.txt|llms-full\\.txt)",
         headers: [
           {
             key: "Cache-Control",

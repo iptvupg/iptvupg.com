@@ -68,8 +68,8 @@ const productSchema = {
     priceCurrency: "USD",
     lowPrice: "7.50",
     highPrice: "16.00",
-    offerCount: "4",
-    url: "https://www.iptvupg.com/best-iptv-service",
+    offerCount: 4,
+    url: "https://www.iptvupg.com/iptv-subscription",
   },
   aggregateRating: {
     "@type": "AggregateRating",
@@ -164,17 +164,6 @@ const faqSchema = {
         text: "IPTV is a legal streaming technology used by major broadcasters worldwide (BT, AT&T U-verse, Verizon Fios). The legality of any specific IPTV service depends on whether it is licensed to distribute its content. Users are responsible for ensuring their use complies with local laws.",
       },
     },
-  ],
-};
-
-const itemListSchema = {
-  "@type": "ItemList",
-  "@id": "https://www.iptvupg.com/best-iptv-service#ranking",
-  name: "Best IPTV Services 2026 — Ranked",
-  itemListOrder: "https://schema.org/ItemListOrderDescending",
-  numberOfItems: 1,
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "IPTV UPG", url: "https://www.iptvupg.com" },
   ],
 };
 
@@ -278,7 +267,7 @@ const players: { name: string; best: string; href: string; store: string }[] = [
 
 const externalRefs: { label: string; href: string; note: string }[] = [
   { label: "Wikipedia: Internet Protocol television", href: "https://en.wikipedia.org/wiki/Internet_Protocol_television", note: "IPTV technology and architecture overview" },
-  { label: "Trustpilot — IPTV UPG reviews", href: "https://www.trustpilot.com/", note: "Independent customer reviews (4.9/5 across 2,380+ subscribers)" },
+  { label: "Trustpilot — IPTV UPG reviews", href: "https://www.trustpilot.com/review/iptvupg.com", note: "Independent customer reviews" },
   { label: "Speedtest by Ookla", href: "https://www.speedtest.net/", note: "Verify your bandwidth before subscribing" },
   { label: "Fast.com (Netflix)", href: "https://fast.com/", note: "Second-opinion bandwidth tester" },
 ];
@@ -388,7 +377,7 @@ export default function BestIptvService() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": [breadcrumbSchema, articleSchema, productSchema, itemListSchema, faqSchema],
+            "@graph": [breadcrumbSchema, articleSchema, productSchema, faqSchema],
           }),
         }}
       />

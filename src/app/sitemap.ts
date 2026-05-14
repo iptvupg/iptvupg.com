@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.iptvupg.com";
 
   // Editorial pillar pages — most recently revised content.
-  const pillarLastMod = new Date("2026-05-01");
+  const pillarLastMod = new Date("2026-05-14");
   // Commercial / device / legal pages — last refreshed in April.
   const standardLastMod = new Date("2026-04-06");
 

@@ -34,8 +34,9 @@ const techArticleSchema = {
   description: "Set up IPTV on your Samsung Smart TV using Smart IPTV, IPTV Smarters, or SS IPTV. Stream 24,000+ channels on Tizen OS with IPTV UPG.",
   image: ["https://www.iptvupg.com/opengraph-image"],
   inLanguage: "en-US",
+  proficiencyLevel: "Beginner",
   datePublished: "2026-04-06",
-  dateModified: "2026-04-06",
+  dateModified: "2026-05-14",
   author: { "@id": "https://www.iptvupg.com/#organization" },
   publisher: { "@id": "https://www.iptvupg.com/#organization" },
   mainEntityOfPage: {
@@ -46,6 +47,7 @@ const techArticleSchema = {
 
 const faqSchema = {
   "@type": "FAQPage",
+  "@id": "https://www.iptvupg.com/samsung-tv-iptv#faq",
   mainEntity: [
     {
       "@type": "Question",
@@ -90,7 +92,28 @@ export default function SamsungTvIptv() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": [breadcrumbSchema, techArticleSchema, faqSchema],
+            "@graph": [
+              breadcrumbSchema,
+              techArticleSchema,
+              {
+                "@type": "Service",
+                "@id": "https://www.iptvupg.com/samsung-tv-iptv#service",
+                name: "IPTV UPG on Samsung TV",
+                serviceType: "IPTV Streaming Service",
+                provider: { "@id": "https://www.iptvupg.com/#organization" },
+                areaServed: ["US", "GB", "CA", "AU"],
+                url: "https://www.iptvupg.com/samsung-tv-iptv",
+                offers: {
+                  "@type": "AggregateOffer",
+                  priceCurrency: "USD",
+                  lowPrice: 16,
+                  highPrice: 90,
+                  offerCount: 4,
+                  url: "https://www.iptvupg.com/iptv-subscription",
+                },
+              },
+              faqSchema,
+            ],
           }),
         }}
       />

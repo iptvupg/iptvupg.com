@@ -73,7 +73,7 @@ const articleSchema = {
   description:
     "Complete buying guide for the 12-month IPTV subscription: pricing math, who it's for, 8-week onboarding roadmap, KPIs, common pitfalls, and how to lock in $7.50/month for a full year.",
   datePublished: "2026-05-01",
-  dateModified: "2026-05-01",
+  dateModified: "2026-05-14",
   inLanguage: "en",
   isAccessibleForFree: true,
   about: [
@@ -86,13 +86,7 @@ const articleSchema = {
     { "@type": "Thing", name: "Adaptive Bitrate Streaming" },
     { "@type": "Thing", name: "Electronic Program Guide" },
   ],
-  author: {
-    "@type": "Person",
-    name: "Marc Whitfield",
-    jobTitle: "Senior IPTV Subscription Editor",
-    worksFor: { "@id": "https://www.iptvupg.com/#organization" },
-    url: "https://www.iptvupg.com/about",
-  },
+  author: { "@id": "https://www.iptvupg.com/#organization" },
   publisher: { "@id": "https://www.iptvupg.com/#organization" },
   mainEntityOfPage: PAGE_URL,
 };
@@ -597,29 +591,33 @@ export default function TwelveMonthsSubscription() {
             </div>
           </section>
 
-          {/* AUTHOR */}
+          {/* REVIEWED BY */}
           <section className="mb-16" id="author">
             <div className="mb-5 inline-flex items-center gap-3 text-[11px] font-semibold tracking-[3px] uppercase text-accent">
               <span className="font-mono">09</span>
               <span className="h-px w-8 bg-accent/40" />
-              <span>About the Author</span>
+              <span>Reviewed By</span>
             </div>
             <div className="rounded-2xl border border-border bg-bg-card p-6">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-accent/20 text-2xl font-black text-accent">
-                  MW
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-accent/15 text-2xl font-black text-accent">
+                  ★
                 </div>
                 <div>
-                  <h3 className="mb-1 text-lg font-bold text-text-primary">Marc Whitfield</h3>
+                  <h3 className="mb-1 text-lg font-bold text-text-primary">IPTV UPG Editorial Team</h3>
                   <p className="mb-3 text-sm text-text-muted">
-                    Senior IPTV Subscription Editor · IPTV UPG · Reviewing annual streaming plans since 2019
+                    Plan economics &amp; subscription guidance · Reviewed on{" "}
+                    <span className="font-mono text-accent">2026-05-14</span>
                   </p>
                   <p className="text-sm leading-relaxed text-text-secondary">
-                    Marc has audited 40+ IPTV providers and benchmarked 2,000+ annual subscriptions on
-                    real-world ISPs across the US, UK, and Europe. He focuses on the math behind long-term
-                    plans — breakeven curves, refund-window auditing, and ROI measurement against cable +
-                    OTT bundles. Reviewed by IPTV UPG&apos;s technical team for accuracy on{" "}
-                    <span className="font-mono text-accent">2026-05-01</span>.
+                    This guide focuses on the math behind long-term plans — breakeven curves,
+                    refund-window auditing, and ROI measurement against cable + OTT bundles. Pricing,
+                    channel counts, uptime, and refund policy are verified against IPTV UPG&apos;s
+                    internal monitoring and customer-support records before publication. Corrections
+                    or technical questions:{" "}
+                    <a href="mailto:support@iptvupg.com" className="font-semibold text-accent hover:underline">
+                      support@iptvupg.com
+                    </a>.
                   </p>
                 </div>
               </div>

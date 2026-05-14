@@ -34,8 +34,9 @@ const techArticleSchema = {
   description: "Set up IPTV on Apple TV 4K and Apple TV HD using GSE Smart IPTV, IPTV Smarters, or iPlayTV. Stream 24,000+ live channels on tvOS with IPTV UPG.",
   image: ["https://www.iptvupg.com/opengraph-image"],
   inLanguage: "en-US",
+  proficiencyLevel: "Beginner",
   datePublished: "2026-04-06",
-  dateModified: "2026-04-06",
+  dateModified: "2026-05-14",
   author: { "@id": "https://www.iptvupg.com/#organization" },
   publisher: { "@id": "https://www.iptvupg.com/#organization" },
   mainEntityOfPage: {
@@ -46,6 +47,7 @@ const techArticleSchema = {
 
 const faqSchema = {
   "@type": "FAQPage",
+  "@id": "https://www.iptvupg.com/apple-tv-iptv#faq",
   mainEntity: [
     {
       "@type": "Question",
@@ -90,7 +92,28 @@ export default function AppleTvIptv() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": [breadcrumbSchema, techArticleSchema, faqSchema],
+            "@graph": [
+              breadcrumbSchema,
+              techArticleSchema,
+              {
+                "@type": "Service",
+                "@id": "https://www.iptvupg.com/apple-tv-iptv#service",
+                name: "IPTV UPG on Apple TV",
+                serviceType: "IPTV Streaming Service",
+                provider: { "@id": "https://www.iptvupg.com/#organization" },
+                areaServed: ["US", "GB", "CA", "AU"],
+                url: "https://www.iptvupg.com/apple-tv-iptv",
+                offers: {
+                  "@type": "AggregateOffer",
+                  priceCurrency: "USD",
+                  lowPrice: 16,
+                  highPrice: 90,
+                  offerCount: 4,
+                  url: "https://www.iptvupg.com/iptv-subscription",
+                },
+              },
+              faqSchema,
+            ],
           }),
         }}
       />

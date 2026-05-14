@@ -44,21 +44,21 @@ const plansData = [
     sku: "IPTVUPG-SUB-3M",
     price: "39.00",
     url: "https://www.iptvupg.com/3-months-iptv-subscription",
-    rating: 740,
+    rating: 1420,
   },
   {
     name: "6 Months",
     sku: "IPTVUPG-SUB-6M",
     price: "60.00",
     url: "https://www.iptvupg.com/6-months-iptv-subscription",
-    rating: 1120,
+    rating: 1840,
   },
   {
     name: "12 Months",
     sku: "IPTVUPG-SUB-12M",
     price: "90.00",
     url: "https://www.iptvupg.com/12-months-iptv-subscription",
-    rating: 2340,
+    rating: 2380,
   },
 ];
 
