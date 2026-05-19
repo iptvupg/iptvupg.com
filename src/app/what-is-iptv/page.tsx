@@ -324,7 +324,7 @@ const faqs: { q: string; a: React.ReactNode }[] = [
     q: "How much does an IPTV subscription cost?",
     a: (
       <>
-        Reputable IPTV providers charge between $7.50 and $20 per month depending on plan length. <Link href="/12-months-iptv-subscription" className="font-semibold text-accent hover:underline">IPTV UPG&apos;s annual plan</Link> works out to $7.50/month for 24,000+ channels — roughly 80–90% less than a $80–$120/month cable bill.
+        Reputable IPTV providers charge between $7.50 and $20 per month depending on plan length. Compare every option on the <Link href="/iptv-subscription" className="font-semibold text-accent hover:underline">IPTV subscription plans page</Link> — IPTV UPG&apos;s <Link href="/12-months-iptv-subscription" className="font-semibold text-accent hover:underline">annual plan</Link> works out to $7.50/month for 24,000+ channels, roughly 80–90% less than a $80–$120/month cable bill.
       </>
     ),
   },

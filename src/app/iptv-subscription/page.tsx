@@ -118,7 +118,7 @@ const pageSchema = {
       name: "IPTV Subscription Plans — Best IPTV Service From $7.50/Month",
       description:
         "Compare every IPTV UPG subscription plan for 2026 with per-month math, savings, and the right plan for each viewer profile.",
-      dateModified: "2026-05-11",
+      dateModified: "2026-05-20",
       breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
       publisher: { "@id": "https://www.iptvupg.com/#organization" },
       mainEntity: {

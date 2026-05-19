@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import RelatedLinks from "@/components/RelatedLinks";
 
 const PAGE_URL = "https://www.iptvupg.com/3-months-iptv-subscription";
 const WHATSAPP_BUY_URL =
@@ -784,6 +785,28 @@ export default function ThreeMonthsSubscription() {
               . 4.9/5 from 1,420+ verified subscribers.
             </p>
           </section>
+
+          <RelatedLinks
+            id="compare-plans"
+            heading="Other IPTV subscription lengths"
+            links={[
+              {
+                href: "/1-month-iptv-subscription",
+                label: "Monthly IPTV Plan",
+                sub: "$16 — no contract, easy to test",
+              },
+              {
+                href: "/6-months-iptv-subscription",
+                label: "6-Month IPTV Subscription",
+                sub: "$60 — save 24% vs quarterly",
+              },
+              {
+                href: "/12-months-iptv-subscription",
+                label: "12-Month IPTV (Save 53%)",
+                sub: "$90 — best value annual plan",
+              },
+            ]}
+          />
         </article>
       </main>
       <Footer />

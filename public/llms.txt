@@ -1,5 +1,5 @@
 # IPTV UPG
-> Last updated: 2026-05-11
+> Last updated: 2026-05-20
 
 > IPTV UPG is a premium IPTV streaming service providing 24,000+ live TV channels and 120,000+ movies and series in 4K/UHD quality. Plans start at $7.50/month. 99.9% server uptime. Instant activation. 7-day money-back guarantee.
 
@@ -110,10 +110,13 @@ IPTV UPG editorial content is researched and maintained by the IPTV UPG support 
 ## Site Pages
 
 - [Home](https://www.iptvupg.com/) — Main service overview, pricing, and features
+- [IPTV Subscription Plans](https://www.iptvupg.com/iptv-subscription) — Pricing hub with all 4 duration plans
 - [Best IPTV Service 2026](https://www.iptvupg.com/best-iptv-service) — 12-metric comparison and ranking methodology
 - [What is IPTV?](https://www.iptvupg.com/what-is-iptv) — Full IPTV primer: technology, protocols, EPG, and how it differs from cable
 - [Free IPTV Trial](https://www.iptvupg.com/iptv-free-trial) — Test before you pay, no credit card required
 - [About IPTV UPG](https://www.iptvupg.com/about) — Team, infrastructure, and editorial standards
+- [M3U / Xtream Codes Converter](https://www.iptvupg.com/m3u-xtream-converter) — Free utility to convert between IPTV playlist formats
+- [IPTV Service by Country](https://www.iptvupg.com/countries) — Country-specific channel coverage and setup pages
 - [macOS IPTV Setup Guide](https://www.iptvupg.com/macos-iptv)
 - [Android IPTV Setup Guide](https://www.iptvupg.com/android-iptv)
 - [Roku IPTV Setup Guide](https://www.iptvupg.com/roku-iptv)

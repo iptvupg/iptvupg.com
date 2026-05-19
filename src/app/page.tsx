@@ -60,6 +60,9 @@ const structuredData = {
         "https://instagram.com/iptvupg",
         "https://www.trustpilot.com/review/iptvupg.com",
         "https://www.youtube.com/@IPTVUPG",
+        "https://www.facebook.com/iptvupg",
+        "https://www.linkedin.com/company/iptvupg",
+        "https://www.crunchbase.com/organization/iptv-upg",
       ],
     },
 
