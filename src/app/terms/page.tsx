@@ -8,6 +8,10 @@ export const metadata: Metadata = {
     "IPTV UPG Terms of Service. Read the terms and conditions governing your use of our IPTV streaming subscription service.",
   alternates: {
     canonical: "https://www.iptvupg.com/terms",
+    languages: {
+      "en": "https://www.iptvupg.com/terms",
+      "x-default": "https://www.iptvupg.com/terms",
+    },
   },
   openGraph: {
     title: "Terms of Service | IPTV UPG",
@@ -34,6 +38,7 @@ const pageSchema = {
       "url": "https://www.iptvupg.com/terms",
       "name": "Terms of Service | IPTV UPG",
       "dateModified": "2026-04-06",
+      "isPartOf": { "@id": "https://www.iptvupg.com/#website" },
       "publisher": { "@id": "https://www.iptvupg.com/#organization" },
       "breadcrumb": { "@id": "https://www.iptvupg.com/terms#breadcrumb" },
     },

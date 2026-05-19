@@ -3,16 +3,20 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About IPTV UPG — Premium IPTV Streaming Service",
   description:
-    "Learn about IPTV UPG and our mission to deliver the best IPTV streaming experience with 24,000+ live channels and 120,000+ movies in 4K.",
+    "Learn about IPTV UPG: how we operate, our infrastructure, editorial standards, and the team behind 24,000+ live channels and 120,000+ movies in 4K.",
   alternates: {
     canonical: "https://www.iptvupg.com/about",
+    languages: {
+      "en": "https://www.iptvupg.com/about",
+      "x-default": "https://www.iptvupg.com/about",
+    },
   },
   openGraph: {
-    title: "About Us | IPTV UPG",
+    title: "About IPTV UPG — Premium IPTV Streaming Service",
     description:
-      "Learn about IPTV UPG and our mission to deliver the best IPTV streaming experience.",
+      "How IPTV UPG operates: infrastructure, editorial standards, contact, and jurisdiction.",
     url: "https://www.iptvupg.com/about",
     type: "website",
   },
@@ -43,8 +47,9 @@ const pageSchema = {
       "@type": "WebPage",
       "@id": "https://www.iptvupg.com/about#webpage",
       url: "https://www.iptvupg.com/about",
-      name: "About Us | IPTV UPG",
-      dateModified: "2026-04-07",
+      name: "About IPTV UPG — Premium IPTV Streaming Service",
+      dateModified: "2026-05-19",
+      isPartOf: { "@id": "https://www.iptvupg.com/#website" },
       publisher: { "@id": "https://www.iptvupg.com/#organization" },
       breadcrumb: { "@id": "https://www.iptvupg.com/about#breadcrumb" },
     },
@@ -69,10 +74,10 @@ export default function AboutPage() {
       <main id="main-content" className="px-6 pt-32 pb-20">
         <article className="mx-auto max-w-[800px]">
           <h1 className="mb-3 text-[clamp(28px,4vw,42px)] font-black">
-            About Us
+            About IPTV UPG
           </h1>
           <p className="mb-10 text-sm text-text-muted">
-            The people behind IPTV UPG
+            How we operate, what we publish, and how to reach us
           </p>
 
           <div className="space-y-10 text-[15px] leading-relaxed text-text-secondary">
@@ -82,18 +87,82 @@ export default function AboutPage() {
                 Who We Are
               </h2>
               <p>
-                IPTV UPG is a premium IPTV streaming service delivering
-                24,000+ live channels and 120,000+ movies &amp; TV shows in
-                stunning 4K quality. Founded by{" "}
-                <strong className="text-text-primary">Bennett Prosacco</strong>,
-                our mission is to make world-class entertainment accessible,
-                affordable, and reliable for viewers everywhere.
+                IPTV UPG is a premium IPTV streaming service founded by{" "}
+                <strong className="text-text-primary">Bennett Prosacco</strong>{" "}
+                and operated from London, United Kingdom. We deliver 24,000+
+                live channels and 120,000+ movies &amp; TV shows in 4K and HD
+                quality to households across the United States, the United
+                Kingdom, and Europe.
               </p>
               <p className="mt-3">
-                We pride ourselves on 99.9% uptime, instant activation, and
-                dedicated 24/7 customer support. Whether you&rsquo;re watching
-                live sports, catching up on the latest series, or exploring
-                international channels, IPTV UPG has you covered.
+                We are an independent IPTV provider — not an affiliate, not a
+                reseller, and not affiliated with any content owner, network,
+                streaming platform, or device manufacturer mentioned on this
+                site. All trademarks remain the property of their respective
+                owners. Our role is to operate the subscription, the streaming
+                infrastructure, and the support channels.
+              </p>
+            </section>
+
+            {/* Infrastructure */}
+            <section>
+              <h2 className="mb-4 text-xl font-bold text-text-primary">
+                Infrastructure
+              </h2>
+              <p>
+                IPTV UPG operates a multi-region streaming backend with
+                adaptive-bitrate delivery and 24/7 monitoring. Channels are
+                distributed across redundant edge nodes so that if one region
+                degrades, your stream fails over silently. Our published
+                operational benchmarks are:
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-5">
+                <li>
+                  <strong className="text-text-primary">99.9% uptime</strong>{" "}
+                  &mdash; measured across the live channel backbone, rolling
+                  90-day window.
+                </li>
+                <li>
+                  <strong className="text-text-primary">~1.8s average channel start</strong>{" "}
+                  &mdash; from selection in your player to first decoded frame
+                  on a 25 Mbps connection.
+                </li>
+                <li>
+                  <strong className="text-text-primary">Adaptive 4K / FHD / HD</strong>{" "}
+                  &mdash; streams downshift gracefully on slow networks
+                  instead of buffering.
+                </li>
+                <li>
+                  <strong className="text-text-primary">2 simultaneous device connections</strong>{" "}
+                  &mdash; included on every paid plan and on the free trial.
+                </li>
+              </ul>
+            </section>
+
+            {/* Editorial standards */}
+            <section>
+              <h2 className="mb-4 text-xl font-bold text-text-primary">
+                Editorial Standards
+              </h2>
+              <p>
+                Every guide, comparison, and FAQ on iptvupg.com is written or
+                reviewed by the IPTV UPG editorial team and dated with a
+                publication or revision date. Where we cite figures &mdash;
+                channel counts, uptime, start-up latency, plan pricing &mdash;
+                those figures are taken from our own infrastructure and
+                pricing systems, not from third-party marketing copy.
+              </p>
+              <p className="mt-3">
+                If we get something wrong, email{" "}
+                <a
+                  href="mailto:support@iptvupg.com"
+                  className="text-accent hover:underline"
+                >
+                  support@iptvupg.com
+                </a>{" "}
+                and we will correct it. Pages we revise carry an updated{" "}
+                <em>dateModified</em> in their structured data so search
+                engines and AI assistants can see the change.
               </p>
             </section>
 
@@ -107,7 +176,8 @@ export default function AboutPage() {
                 without the premium price tag. Our goal is to provide a
                 seamless streaming experience with the widest content library,
                 the most stable servers, and the friendliest support team in
-                the industry.
+                the industry &mdash; backed by a no-questions 24-hour free
+                trial and a 7-day money-back guarantee on every paid plan.
               </p>
             </section>
 

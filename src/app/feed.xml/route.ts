@@ -3,10 +3,34 @@ const ogImage = `${baseUrl}/opengraph-image`;
 
 const pages = [
   {
+    title: "What is IPTV? The Complete 2026 Guide",
+    url: `${baseUrl}/what-is-iptv`,
+    description: "Internet Protocol Television explained — how it works, devices, pricing, and legality in 2026.",
+    date: "2026-05-01",
+    category: "Guides",
+    keywords: "what is iptv, iptv explained, iptv guide 2026",
+  },
+  {
+    title: "Best IPTV Service in 2026 — Verified Comparison",
+    url: `${baseUrl}/best-iptv-service`,
+    description: "Seven buying criteria for picking the best IPTV service in 2026, plus how IPTV UPG scores against each.",
+    date: "2026-05-01",
+    category: "Guides",
+    keywords: "best iptv service, best iptv, iptv comparison",
+  },
+  {
+    title: "IPTV Subscription Plans — From $7.50/Month",
+    url: `${baseUrl}/iptv-subscription`,
+    description: "Compare IPTV UPG subscription plans by duration, price, and value. 24,000+ channels, 4K, 7-day money-back guarantee.",
+    date: "2026-05-01",
+    category: "Plans",
+    keywords: "iptv subscription, iptv plans, iptv pricing",
+  },
+  {
     title: "IPTV Free Trial — Test 24,000+ Channels Before You Buy",
     url: `${baseUrl}/iptv-free-trial`,
-    description: "Try IPTV UPG free. Full access to 24,000+ live channels and 120,000+ movies in 4K. No credit card required, instant activation.",
-    date: "2026-04-06",
+    description: "Try IPTV UPG free for 24 hours. Full access to 24,000+ live channels and 120,000+ movies in 4K. No credit card required, instant activation.",
+    date: "2026-05-19",
     category: "Plans",
     keywords: "iptv free trial, iptv test, free iptv, try iptv",
   },

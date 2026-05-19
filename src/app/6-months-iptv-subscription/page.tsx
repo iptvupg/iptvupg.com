@@ -15,6 +15,10 @@ export const metadata: Metadata = {
     "6-month IPTV subscription for $60 ($10/mo) — save 38% vs. monthly. 24,000+ live channels, 120,000+ 4K movies, anti-freeze streaming, 2 device connections, 7-day refund. Best mid-term IPTV plan for 2026.",
   alternates: {
     canonical: PAGE_URL,
+    languages: {
+      "en": PAGE_URL,
+      "x-default": PAGE_URL,
+    },
   },
   openGraph: {
     title: "6 Months IPTV Subscription — Half-Year Plan $60 ($10/mo)",
@@ -87,13 +91,7 @@ const articleSchema = {
     { "@type": "Thing", name: "Adaptive Bitrate Streaming" },
     { "@type": "Thing", name: "Electronic Program Guide" },
   ],
-  author: {
-    "@type": "Person",
-    name: "Marc Whitfield",
-    jobTitle: "Senior IPTV Subscription Editor",
-    worksFor: { "@id": "https://www.iptvupg.com/#organization" },
-    url: "https://www.iptvupg.com/about",
-  },
+  author: { "@id": "https://www.iptvupg.com/#organization" },
   publisher: { "@id": "https://www.iptvupg.com/#organization" },
   mainEntityOfPage: PAGE_URL,
 };
@@ -123,7 +121,7 @@ const faqSchema = {
       name: "What channels and content are included in the half-year IPTV plan?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "All IPTV UPG plans include the identical catalog regardless of duration: 24,000+ live TV channels (US, UK, Canada, Europe, MENA, Asia, Africa, Latin America), 120,000+ on-demand movies and series, premium live sports (Premier League, NFL, NBA, MLB, NHL, UFC, F1), full EPG, and SD/HD/Full HD/4K UHD streams with anti-freeze adaptive bitrate technology.",
+        text: "All IPTV UPG plans include the identical catalog regardless of duration: 24,000+ live TV channels (US, UK, Canada, Europe, MENA, Asia, Africa, Latin America), 120,000+ on-demand movies and series, premium live sports (top-tier football, US major-league sports, motorsport, and MMA), full EPG, and SD/HD/Full HD/4K UHD streams with anti-freeze adaptive bitrate technology.",
       },
     },
     {
@@ -561,7 +559,7 @@ export default function SixMonthsSubscription() {
               {[
                 "24,000+ live TV channels (US, UK, EU, MENA, LATAM, Asia)",
                 "120,000+ on-demand movies & series (4K, HD, SD)",
-                "Premium live sports (NFL, NBA, MLB, NHL, UFC, F1, Premier League)",
+                "Premium live sports: top-tier football, US major-league sports, motorsport, and MMA",
                 "Full EPG (Electronic Program Guide) with 7-day forward listings",
                 "Anti-freeze adaptive bitrate streaming technology",
                 "2 simultaneous device connections (unlimited registered devices)",
@@ -603,6 +601,58 @@ export default function SixMonthsSubscription() {
             </div>
           </section>
 
+
+          {/* DURATION-SPECIFIC */}
+          <section className="mb-16" id="duration-specific">
+            <div className="mb-5 inline-flex items-center gap-3 text-[11px] font-semibold tracking-[3px] uppercase text-accent">
+              <span className="font-mono">08.5</span>
+              <span className="h-px w-8 bg-accent/40" />
+              <span>Plan-specific notes</span>
+            </div>
+            <h2 className="mb-4 text-[clamp(22px,3vw,30px)] font-black">
+              When the 6-Month IPTV Plan Out-Performs Both Sides
+            </h2>
+            <div className="space-y-4 text-[15px] leading-relaxed text-text-secondary">
+              <p className="mb-4">
+                Six months is the sweet spot for households that have
+                already validated the service but aren&apos;t ready for a
+                12-month commitment. Three scenarios where the half-year
+                plan wins clearly:
+              </p>
+              <ul className="mb-4 list-disc space-y-2 pl-5">
+                <li>
+                  <strong className="text-text-primary">Full European football season.</strong>{" "}
+                  The top European football leagues all run August through
+                  May with a winter break, roughly 9 months in total. The
+                  most-watched 6 months (Sep to Feb) fit one plan exactly.
+                </li>
+                <li>
+                  <strong className="text-text-primary">Returning student / split-time household.</strong>{" "}
+                  Students home for the autumn and winter term, summer
+                  shared-custody households, or contractors on a 6-month
+                  on-site assignment all match the plan duration without
+                  paying for off-period months.
+                </li>
+                <li>
+                  <strong className="text-text-primary">Gift cycle.</strong>{" "}
+                  6 months is the most common gift-renewal length we see —
+                  long enough to be meaningful, short enough that the
+                  recipient can switch plans themselves at renewal.
+                </li>
+              </ul>
+              <p>
+                The 6-month plan is $60 ($10 / month). Compared to monthly
+                ($16 / mo), you save $36 across the 6 months. Compared to
+                the 12-month plan ($7.50 / mo), you pay $2.50 / month more
+                for the right to exit at month 6 — that&apos;s $15 total
+                in optionality, much less than the $51 saved versus
+                staying month-to-month. If you&apos;ve already done the
+                trial and a monthly cycle, the 6-month plan is usually
+                the most rational pick.
+              </p>
+            </div>
+          </section>
+
           {/* AUTHOR */}
           <section className="mb-16" id="author">
             <div className="mb-5 inline-flex items-center gap-3 text-[11px] font-semibold tracking-[3px] uppercase text-accent">
@@ -613,15 +663,15 @@ export default function SixMonthsSubscription() {
             <div className="rounded-2xl border border-border bg-bg-card p-6">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
                 <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-accent/20 text-2xl font-black text-accent">
-                  MW
+                  UPG
                 </div>
                 <div>
-                  <h3 className="mb-1 text-lg font-bold text-text-primary">Marc Whitfield</h3>
+                  <h3 className="mb-1 text-lg font-bold text-text-primary">IPTV UPG Editorial Team</h3>
                   <p className="mb-3 text-sm text-text-muted">
-                    Senior IPTV Subscription Editor · IPTV UPG · Reviewing IPTV plans since 2019
+                    Editorial team at IPTV UPG · Reviewing IPTV plans since 2019
                   </p>
                   <p className="text-sm leading-relaxed text-text-secondary">
-                    Marc has audited 40+ IPTV providers and benchmarked 2,000+ subscriptions on
+                    Our editorial team has audited 40+ IPTV providers and benchmarked 2,000+ subscriptions on
                     real-world ISPs across the US, UK, and Europe. His specialty is mid-term plan
                     economics — breakeven curves, refund-window auditing, and the renewal-vs-upgrade
                     decision at month 6. Reviewed by IPTV UPG&apos;s technical team for accuracy on{" "}

@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     "IPTV on Firestick setup in minutes. Sideload TiviMate or IPTV Smarters on Fire TV Stick, 4K, 4K Max, and Cube. 24,000+ channels with IPTV UPG.",
   alternates: {
     canonical: "https://www.iptvupg.com/fire-tv-iptv",
+    languages: {
+      "en": "https://www.iptvupg.com/fire-tv-iptv",
+      "x-default": "https://www.iptvupg.com/fire-tv-iptv",
+    },
   },
   openGraph: {
     title: "IPTV on Firestick: Setup Guide for Fire TV Stick 2026",
@@ -259,6 +263,28 @@ export default function FireTvIptv() {
               </h3>
               <p>
                 Fire TV Sticks have limited internal storage (8 GB total, about 5 GB usable). If you run out of space, remove unused apps and clear cached data. After sideloading with Downloader, always delete the downloaded APK files — they remain in the Downloader folder and consume space. Go to Downloader &gt; Files to find and delete old APK downloads.
+              </p>
+            </section>
+
+            {/* Device-Specific Compatibility */}
+            <section>
+              <h2 className="mb-4 text-xl font-bold text-text-primary">
+                Fire TV Hardware Models &amp; Fire OS Compatibility
+              </h2>
+              <p>
+                Amazon ships several Fire TV variants, and they behave very differently when streaming IPTV in 4K. The chipset and Fire OS branch dictate which apps sideload cleanly and how reliably HEVC decodes.
+              </p>
+              <ul className="mt-3 list-disc space-y-1.5 pl-6">
+                <li><strong className="text-text-primary">Fire TV Cube (3rd gen, 2022):</strong> Octa-core 2.2 GHz, 4K HDR10+, Dolby Vision, Wi-Fi 6E — the best Fire device for IPTV UPG, runs TiviMate flawlessly.</li>
+                <li><strong className="text-text-primary">Fire TV Stick 4K Max (2nd gen, 2023):</strong> 2 GB RAM, Wi-Fi 6E — handles 4K live streams well; recommended for new buyers.</li>
+                <li><strong className="text-text-primary">Fire TV Stick 4K (2018/2023):</strong> Capable of 4K but the 1.5 GB RAM 2018 model occasionally stutters on TiviMate with large EPG XML files — clear the EPG cache weekly.</li>
+                <li><strong className="text-text-primary">Fire TV Stick (Lite / 3rd gen HD):</strong> 1080p only. Use IPTV Smarters Pro instead of TiviMate for less RAM pressure and force 720p/1080p streams in app settings.</li>
+              </ul>
+              <p className="mt-3">
+                <strong className="text-text-primary">Fire OS version &amp; sideloading:</strong> Fire OS 7 (Android 9) and Fire OS 8 (Android 11) both support sideloading via the Downloader app. On Fire OS 8, you must first enable Install Unknown Apps from Settings → My Fire TV → Developer Options (the menu is hidden by default — tap the build number 7 times under About to reveal it). Use Downloader to fetch TiviMate&apos;s APK directly since it is removed from the Amazon Appstore.
+              </p>
+              <p className="mt-3">
+                <strong className="text-text-primary">Disable Amazon overlays:</strong> Fire TV launches Amazon&apos;s home screen on every boot. Use the Launcher Manager method (sideload Wolf Launcher or Project Lemur) only if you accept the trade-offs — many users prefer leaving the default launcher and just opening TiviMate from Your Apps. Disable Featured Content under Settings → Preferences to free RAM and reduce ads while channel-surfing.
               </p>
             </section>
 

@@ -8,6 +8,10 @@ export const metadata: Metadata = {
     "IPTV UPG DMCA Policy. Learn how to file a copyright infringement notice or counter-notification under the Digital Millennium Copyright Act.",
   alternates: {
     canonical: "https://www.iptvupg.com/dmca",
+    languages: {
+      "en": "https://www.iptvupg.com/dmca",
+      "x-default": "https://www.iptvupg.com/dmca",
+    },
   },
   openGraph: {
     title: "DMCA Policy | IPTV UPG",
@@ -34,6 +38,7 @@ const pageSchema = {
       "url": "https://www.iptvupg.com/dmca",
       "name": "DMCA Policy | IPTV UPG",
       "dateModified": "2026-04-06",
+      "isPartOf": { "@id": "https://www.iptvupg.com/#website" },
       "publisher": { "@id": "https://www.iptvupg.com/#organization" },
       "breadcrumb": { "@id": "https://www.iptvupg.com/dmca#breadcrumb" },
     },

@@ -38,7 +38,8 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.iptvupg.com",
+    // No root-level canonical: every page declares its own to avoid silently
+    // inheriting the homepage URL on routes that forget to set one.
     types: {
       "application/rss+xml": "https://www.iptvupg.com/feed.xml",
       "application/atom+xml": "https://www.iptvupg.com/atom.xml",
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "The Best IPTV Service of 2026 — 24,000+ Channels in 4K From $7.50/mo",
     description:
-      "Premium IPTV with anti-freeze 4K streaming on every device. Free trial, no credit card. 99.9% uptime. Trusted by 12,000+ subscribers worldwide.",
+      "Premium IPTV with anti-freeze 4K streaming on every device. Free trial, no credit card. 99.9% uptime. Trusted by 6,000+ subscribers worldwide.",
     url: "https://www.iptvupg.com",
     siteName: "IPTV UPG",
     locale: "en_US",
@@ -71,6 +72,44 @@ export const metadata: Metadata = {
   },
 };
 
+// Site-wide JSON-LD: Organization + WebSite anchors. Page-level @graph blocks
+// reference these via @id (#organization, #website) so the entity graph is
+// connected on every route, not just the homepage.
+const globalEntitySchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.iptvupg.com/#organization",
+      name: "IPTV UPG",
+      url: "https://www.iptvupg.com",
+      logo: {
+        "@type": "ImageObject",
+        "@id": "https://www.iptvupg.com/#logo",
+        url: "https://www.iptvupg.com/opengraph-image",
+        width: 1200,
+        height: 630,
+        caption: "IPTV UPG — Best IPTV Service",
+      },
+      sameAs: [
+        "https://twitter.com/iptvupg",
+        "https://instagram.com/iptvupg",
+        "https://www.trustpilot.com/review/iptvupg.com",
+        "https://www.youtube.com/@IPTVUPG",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.iptvupg.com/#website",
+      name: "IPTV UPG",
+      alternateName: "IPTVUPG",
+      url: "https://www.iptvupg.com",
+      publisher: { "@id": "https://www.iptvupg.com/#organization" },
+      inLanguage: "en",
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -79,6 +118,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} antialiased`}>
       <body className="min-h-screen font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(globalEntitySchema) }}
+        />
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>

@@ -15,6 +15,10 @@ export const metadata: Metadata = {
     "Monthly IPTV subscription for $16, no contract, no auto-renewal. 24,000+ live channels, 120,000+ 4K movies, anti-freeze streaming, 2 device connections, 7-day money-back guarantee. Best risk-free IPTV plan for 2026.",
   alternates: {
     canonical: PAGE_URL,
+    languages: {
+      "en": PAGE_URL,
+      "x-default": PAGE_URL,
+    },
   },
   openGraph: {
     title: "1 Month IPTV Subscription — Monthly Plan $16 (No Contract)",
@@ -87,13 +91,7 @@ const articleSchema = {
     { "@type": "Thing", name: "Adaptive Bitrate Streaming" },
     { "@type": "Thing", name: "Electronic Program Guide" },
   ],
-  author: {
-    "@type": "Person",
-    name: "Marc Whitfield",
-    jobTitle: "Senior IPTV Subscription Editor",
-    worksFor: { "@id": "https://www.iptvupg.com/#organization" },
-    url: "https://www.iptvupg.com/about",
-  },
+  author: { "@id": "https://www.iptvupg.com/#organization" },
   publisher: { "@id": "https://www.iptvupg.com/#organization" },
   mainEntityOfPage: PAGE_URL,
 };
@@ -542,7 +540,7 @@ export default function OneMonthSubscription() {
               {[
                 "24,000+ live TV channels (US, UK, EU, MENA, LATAM, Asia)",
                 "120,000+ on-demand movies & series (4K, HD, SD)",
-                "Premium live sports (NFL, NBA, MLB, NHL, UFC, F1, Premier League)",
+                "Premium live sports: top-tier football, US major-league sports, motorsport, and MMA",
                 "Full EPG (Electronic Program Guide) with 7-day forward listings",
                 "Anti-freeze adaptive bitrate streaming technology",
                 "2 simultaneous device connections (unlimited registered devices)",
@@ -584,6 +582,63 @@ export default function OneMonthSubscription() {
             </div>
           </section>
 
+
+          {/* DURATION-SPECIFIC */}
+          <section className="mb-16" id="duration-specific">
+            <div className="mb-5 inline-flex items-center gap-3 text-[11px] font-semibold tracking-[3px] uppercase text-accent">
+              <span className="font-mono">08.5</span>
+              <span className="h-px w-8 bg-accent/40" />
+              <span>Plan-specific notes</span>
+            </div>
+            <h2 className="mb-4 text-[clamp(22px,3vw,30px)] font-black">
+              Who the Monthly IPTV Plan Is For
+            </h2>
+            <div className="space-y-4 text-[15px] leading-relaxed text-text-secondary">
+              <p className="mb-4">
+                The 1-month IPTV subscription is built for households that want
+                to <strong className="text-text-primary">stay flexible</strong>{" "}
+                rather than commit. We see four use-patterns dominate monthly
+                billing on IPTV UPG:
+              </p>
+              <ul className="mb-4 list-disc space-y-2 pl-5">
+                <li>
+                  <strong className="text-text-primary">The post-trial evaluator.</strong>{" "}
+                  You used the 24-hour free trial, you liked the catalog and
+                  the start-up speed, but you want one billing cycle on your
+                  own peak-hour traffic before committing to a longer plan.
+                </li>
+                <li>
+                  <strong className="text-text-primary">The single-event renter.</strong>{" "}
+                  A specific tournament, fight night, or playoffs window —
+                  4 to 6 weeks long. You don&apos;t want a yearly plan that
+                  outlives the reason you signed up.
+                </li>
+                <li>
+                  <strong className="text-text-primary">The traveling household.</strong>{" "}
+                  Working abroad for a month or staying in a holiday rental
+                  where your home cable doesn&apos;t reach. The monthly plan
+                  covers exactly the interval you&apos;re away.
+                </li>
+                <li>
+                  <strong className="text-text-primary">The gift recipient.</strong>{" "}
+                  Someone funded the first month so you could try premium IPTV
+                  in your own living room before you decide whether to renew
+                  yourself.
+                </li>
+              </ul>
+              <p>
+                The monthly plan costs more per month than longer durations
+                because flexibility itself has a price. The math: $16 / month
+                for 1 month vs $7.50 / month on the 12-month plan. The
+                $8.50 / month difference buys you the right to walk away each
+                month with no balance remaining. If that flexibility is worth
+                more to you than the saving, the monthly plan is the right
+                pick — otherwise the 3-month plan is usually the better
+                trade-off.
+              </p>
+            </div>
+          </section>
+
           {/* AUTHOR */}
           <section className="mb-16" id="author">
             <div className="mb-5 inline-flex items-center gap-3 text-[11px] font-semibold tracking-[3px] uppercase text-accent">
@@ -594,16 +649,16 @@ export default function OneMonthSubscription() {
             <div className="rounded-2xl border border-border bg-bg-card p-6">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
                 <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-accent/20 text-2xl font-black text-accent">
-                  MW
+                  UPG
                 </div>
                 <div>
-                  <h3 className="mb-1 text-lg font-bold text-text-primary">Marc Whitfield</h3>
+                  <h3 className="mb-1 text-lg font-bold text-text-primary">IPTV UPG Editorial Team</h3>
                   <p className="mb-3 text-sm text-text-muted">
-                    Senior IPTV Subscription Editor · IPTV UPG · Reviewing IPTV plans since 2019
+                    Editorial team at IPTV UPG · Reviewing IPTV plans since 2019
                   </p>
                   <p className="text-sm leading-relaxed text-text-secondary">
-                    Marc has audited 40+ IPTV providers and benchmarked 2,000+ subscriptions on
-                    real-world ISPs across the US, UK, and Europe. His specialty is the trial-to-paid
+                    Our editorial team has audited 40+ IPTV providers and benchmarked 2,000+ subscriptions on
+                    real-world ISPs across the US, UK, and Europe. Our focus is the trial-to-paid
                     handoff — when to renew monthly, when to upgrade quarterly, and how to spot
                     providers that don&apos;t deserve a paid month. Reviewed by IPTV UPG&apos;s
                     technical team for accuracy on{" "}

@@ -120,11 +120,24 @@ async function submitUrl(
   return { url, success: res.ok, status: res.status, response: data };
 }
 
+function isAuthorized(request: Request): boolean {
+  const expected = process.env.GOOGLE_INDEXING_SECRET;
+  if (!expected) return false;
+  const provided = request.headers.get("x-google-indexing-secret");
+  return provided === expected;
+}
+
 /**
  * POST /api/google-indexing — Submit URLs to Google Indexing API
  * Body: { urls?: string[], type?: "URL_UPDATED" | "URL_DELETED" }
  */
 export async function POST(request: Request) {
+  if (!isAuthorized(request)) {
+    return NextResponse.json(
+      { success: false, error: "Unauthorized" },
+      { status: 401 }
+    );
+  }
   try {
     let urls = ALL_URLS;
     let type: "URL_UPDATED" | "URL_DELETED" = "URL_UPDATED";
@@ -171,7 +184,7 @@ export async function POST(request: Request) {
 }
 
 /**
- * GET /api/google-indexing — Health check
+ * GET /api/google-indexing — Health check (no credentials exposed)
  */
 export async function GET() {
   const hasCredentials =
@@ -180,7 +193,6 @@ export async function GET() {
   return NextResponse.json({
     service: "Google Indexing API",
     configured: hasCredentials,
-    serviceAccount: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL || "not set",
     totalUrls: ALL_URLS.length,
     dailyLimit: "200 requests/day",
     usage: "POST /api/google-indexing to submit all URLs as URL_UPDATED",

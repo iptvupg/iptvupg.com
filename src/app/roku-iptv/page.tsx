@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     "IPTV on Roku setup using screen mirroring and sideloading. Watch 24,000+ live channels on Roku Express, Streaming Stick, and Ultra with IPTV UPG.",
   alternates: {
     canonical: "https://www.iptvupg.com/roku-iptv",
+    languages: {
+      "en": "https://www.iptvupg.com/roku-iptv",
+      "x-default": "https://www.iptvupg.com/roku-iptv",
+    },
   },
   openGraph: {
     title: "IPTV on Roku: Setup Guide with Screen Mirroring 2026",
@@ -266,6 +270,29 @@ export default function RokuIptv() {
               </h3>
               <p>
                 Confirm that Screen Mirroring is enabled on the Roku (Settings &gt; System &gt; Screen Mirroring &gt; Always Allow). Both the Roku and the mirroring device must be on the exact same Wi-Fi network and subnet. If you have a mesh network or multiple access points, ensure they are not isolating clients. Rebooting both the Roku and your phone or laptop often resolves discovery issues.
+              </p>
+            </section>
+
+            {/* Device-Specific Compatibility */}
+            <section>
+              <h2 className="mb-4 text-xl font-bold text-text-primary">
+                Roku Hardware Models &amp; IPTV Workaround Compatibility
+              </h2>
+              <p>
+                Roku is the most restrictive major streaming platform for IPTV — Roku OS blocks third-party app sideloading, removes IPTV apps from its channel store quickly, and disables developer mode unless you pay an annual fee. Your hardware model still affects which workarounds are practical.
+              </p>
+              <ul className="mt-3 list-disc space-y-1.5 pl-6">
+                <li><strong className="text-text-primary">Roku Ultra (2022/2024):</strong> Ethernet + Wi-Fi 6, Dolby Vision, 4K HDR10+ — best for screen-mirroring 4K IPTV from an Android phone or Windows laptop.</li>
+                <li><strong className="text-text-primary">Roku Streaming Stick 4K (3820X):</strong> Solid mirroring target with Wi-Fi 6; mirror at 1080p for the smoothest sports experience.</li>
+                <li><strong className="text-text-primary">Roku Express 4K+:</strong> Budget option — mirroring works but expect occasional 1-2 second hitches during fast scene changes.</li>
+                <li><strong className="text-text-primary">Roku Streambar / Roku TVs (TCL, Hisense, Onn):</strong> Same Roku OS restrictions apply; no advantage over a stick for IPTV.</li>
+                <li><strong className="text-text-primary">Pre-4K Roku (Express HD, Premiere):</strong> Can still mirror at 1080p; ignore 4K streams from IPTV UPG and use HD/SD channels.</li>
+              </ul>
+              <p className="mt-3">
+                <strong className="text-text-primary">Recommended setup path:</strong> Don&apos;t fight Roku OS. The cleanest IPTV UPG experience on a Roku-connected TV is to plug a $40 Fire TV Stick 4K Max or $30 Android TV stick into the same TV&apos;s other HDMI port. If you must use Roku, use Screen Mirroring (Settings → System → Screen Mirroring → Prompt) and cast from an Android phone running TiviMate. iOS users can use AirPlay if the Roku model is on Roku OS 9.4+.
+              </p>
+              <p className="mt-3">
+                <strong className="text-text-primary">Roku channel store IPTV apps come and go:</strong> M3U Playlist Player and similar channels appear and disappear from the Roku Channel Store frequently due to copyright takedowns. Even when they exist, they don&apos;t support Xtream Codes API natively — they only accept M3U URLs, and EPG support is limited.
               </p>
             </section>
 

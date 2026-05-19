@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     "IPTV on MAG box setup for MAG 254, 322, 420, 424, and 524. Configure portal URL and stream 24,000+ channels in HD and 4K with IPTV UPG.",
   alternates: {
     canonical: "https://www.iptvupg.com/mag-iptv",
+    languages: {
+      "en": "https://www.iptvupg.com/mag-iptv",
+      "x-default": "https://www.iptvupg.com/mag-iptv",
+    },
   },
   openGraph: {
     title: "IPTV on MAG Box: Portal URL Setup Guide 2026",
@@ -256,6 +260,29 @@ export default function MagIptv() {
               </h3>
               <p>
                 If the device freezes during boot, it may need a firmware update or factory reset. Hold the Menu button on the remote while powering on the device to access the BIOS/recovery menu. From there, you can reset to factory defaults. After the reset, you will need to re-enter your portal URL. If the problem persists, the firmware may need to be reflashed — contact Infomir support or IPTV UPG for guidance.
+              </p>
+            </section>
+
+            {/* Device-Specific Compatibility */}
+            <section>
+              <h2 className="mb-4 text-xl font-bold text-text-primary">
+                MAG Box Models &amp; Stalker Portal Compatibility
+              </h2>
+              <p>
+                MAG boxes are purpose-built IPTV set-top boxes from Infomir — they don&apos;t run Android or any general OS. Instead, they use Stalker Portal authentication, which ties your account to the device&apos;s MAC address.
+              </p>
+              <ul className="mt-3 list-disc space-y-1.5 pl-6">
+                <li><strong className="text-text-primary">MAG 254 (BCM7362 chip):</strong> 1080p only, no HEVC hardware decode — request H.264 streams from IPTV UPG support. End-of-life for new firmware but still functional.</li>
+                <li><strong className="text-text-primary">MAG 322 / 322w1 (BCM7362):</strong> Identical capability to MAG 254 with built-in Wi-Fi on the w1 variant. Avoid for 4K accounts.</li>
+                <li><strong className="text-text-primary">MAG 420 / 420w1 (Hisilicon Hi3798MV200):</strong> First 4K-capable MAG — HEVC 10-bit hardware decode, ideal for IPTV UPG 4K channels.</li>
+                <li><strong className="text-text-primary">MAG 424 / 424w3 (Hisilicon Hi3798MV300):</strong> Adds Wi-Fi 5 and slightly faster UI rendering. Recommended buy if you want a dedicated IPTV box.</li>
+                <li><strong className="text-text-primary">MAG 524 / 524w3:</strong> Newest generation with HDR10 and Dolby Audio passthrough — the best MAG for HDR-mastered VOD content.</li>
+              </ul>
+              <p className="mt-3">
+                <strong className="text-text-primary">MAC address provisioning:</strong> MAG boxes authenticate by MAC, not credentials. After ordering, send IPTV UPG support your MAG&apos;s MAC address (Settings → System Settings → About → Device Information). They activate your portal and you simply reboot. Cloning MAC addresses to other devices violates the terms of service and may trigger account suspension — buy a real MAG box from an authorized reseller.
+              </p>
+              <p className="mt-3">
+                <strong className="text-text-primary">Portal URL vs M3U:</strong> MAGs require a Stalker portal URL (typically <code className="rounded bg-bg-card px-1.5 py-0.5 font-mono text-xs">http://portal.iptvupg.com:8080/c/</code> — exact path provided in your activation email). They do not load M3U playlists natively. If you also want to use the account on a phone or laptop, IPTV UPG can issue a parallel M3U on request.
               </p>
             </section>
 

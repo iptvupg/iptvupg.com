@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     "What is IPTV? A plain-English guide to Internet Protocol Television — how it works, how it differs from cable and OTT streaming, the best IPTV services, devices, costs, and legality in 2026.",
   alternates: {
     canonical: "https://www.iptvupg.com/what-is-iptv",
+    languages: {
+      "en": "https://www.iptvupg.com/what-is-iptv",
+      "x-default": "https://www.iptvupg.com/what-is-iptv",
+    },
   },
   openGraph: {
     title: "What is IPTV? The Complete 2026 Guide to IPTV Services & Streaming",
@@ -35,20 +39,19 @@ const articleSchema = {
   datePublished: "2024-08-10",
   dateModified: "2026-05-01",
   inLanguage: "en",
+  image: [
+    {
+      "@type": "ImageObject",
+      url: "https://www.iptvupg.com/opengraph-image",
+      width: 1200,
+      height: 630,
+    },
+  ],
   author: {
-    "@type": "Organization",
     "@id": "https://www.iptvupg.com/#organization",
-    name: "IPTV UPG Editorial Team",
-    url: "https://www.iptvupg.com",
   },
   publisher: {
-    "@type": "Organization",
     "@id": "https://www.iptvupg.com/#organization",
-    name: "IPTV UPG",
-    logo: {
-      "@type": "ImageObject",
-      url: "https://www.iptvupg.com/logo.png",
-    },
   },
   about: [
     { "@type": "Thing", name: "IPTV" },
@@ -807,7 +810,7 @@ export default function WhatIsIptv() {
               Now You Know What IPTV Is — Try It Free
             </h2>
             <p className="mx-auto mb-7 max-w-[560px] text-[15px] leading-relaxed text-text-secondary">
-              See for yourself why 100,000+ subscribers chose IPTV over cable. 24,000+ channels in 4K, no credit card needed, activated in minutes via WhatsApp.
+              See for yourself why 6,000+ subscribers chose IPTV over cable. 24,000+ channels in 4K, no credit card needed, activated in minutes via WhatsApp.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5">
               <a

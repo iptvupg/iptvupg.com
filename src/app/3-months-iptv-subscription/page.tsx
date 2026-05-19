@@ -15,6 +15,10 @@ export const metadata: Metadata = {
     "3-month IPTV subscription for $39 ($13/mo) — save 19% vs. monthly. 24,000+ live channels, 120,000+ 4K movies, anti-freeze streaming, 2 device connections, 7-day refund. Best short-term IPTV plan for 2026.",
   alternates: {
     canonical: PAGE_URL,
+    languages: {
+      "en": PAGE_URL,
+      "x-default": PAGE_URL,
+    },
   },
   openGraph: {
     title: "3 Months IPTV Subscription — Quarterly Plan $39 ($13/mo)",
@@ -87,13 +91,7 @@ const articleSchema = {
     { "@type": "Thing", name: "Adaptive Bitrate Streaming" },
     { "@type": "Thing", name: "Electronic Program Guide" },
   ],
-  author: {
-    "@type": "Person",
-    name: "Marc Whitfield",
-    jobTitle: "Senior IPTV Subscription Editor",
-    worksFor: { "@id": "https://www.iptvupg.com/#organization" },
-    url: "https://www.iptvupg.com/about",
-  },
+  author: { "@id": "https://www.iptvupg.com/#organization" },
   publisher: { "@id": "https://www.iptvupg.com/#organization" },
   mainEntityOfPage: PAGE_URL,
 };
@@ -123,7 +121,7 @@ const faqSchema = {
       name: "What channels and content are included in the quarterly IPTV plan?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "All IPTV UPG plans include the identical catalog regardless of duration: 24,000+ live TV channels (US, UK, Canada, Europe, MENA, Asia, Africa, Latin America), 120,000+ on-demand movies and series, premium live sports (Premier League, NFL, NBA, MLB, NHL, UFC, F1), full EPG, and SD/HD/Full HD/4K UHD streams with anti-freeze adaptive bitrate technology.",
+        text: "All IPTV UPG plans include the identical catalog regardless of duration: 24,000+ live TV channels (US, UK, Canada, Europe, MENA, Asia, Africa, Latin America), 120,000+ on-demand movies and series, premium live sports (top-tier football, US major-league sports, motorsport, and MMA), full EPG, and SD/HD/Full HD/4K UHD streams with anti-freeze adaptive bitrate technology.",
       },
     },
     {
@@ -561,7 +559,7 @@ export default function ThreeMonthsSubscription() {
               {[
                 "24,000+ live TV channels (US, UK, EU, MENA, LATAM, Asia)",
                 "120,000+ on-demand movies & series (4K, HD, SD)",
-                "Premium live sports (NFL, NBA, MLB, NHL, UFC, F1, Premier League)",
+                "Premium live sports: top-tier football, US major-league sports, motorsport, and MMA",
                 "Full EPG (Electronic Program Guide) with 7-day forward listings",
                 "Anti-freeze adaptive bitrate streaming technology",
                 "2 simultaneous device connections (unlimited registered devices)",
@@ -603,6 +601,57 @@ export default function ThreeMonthsSubscription() {
             </div>
           </section>
 
+
+          {/* DURATION-SPECIFIC */}
+          <section className="mb-16" id="duration-specific">
+            <div className="mb-5 inline-flex items-center gap-3 text-[11px] font-semibold tracking-[3px] uppercase text-accent">
+              <span className="font-mono">08.5</span>
+              <span className="h-px w-8 bg-accent/40" />
+              <span>Plan-specific notes</span>
+            </div>
+            <h2 className="mb-4 text-[clamp(22px,3vw,30px)] font-black">
+              Why a Quarterly IPTV Cycle Fits Real-World TV Calendars
+            </h2>
+            <div className="space-y-4 text-[15px] leading-relaxed text-text-secondary">
+              <p className="mb-4">
+                90 days happens to be the natural length of most TV
+                content cycles. The 3-month IPTV subscription lines up
+                cleanly with several recurring viewing windows:
+              </p>
+              <ul className="mb-4 list-disc space-y-2 pl-5">
+                <li>
+                  <strong className="text-text-primary">NFL regular-season → playoffs.</strong>{" "}
+                  ~13 regular-season weeks plus wild-card round fits inside
+                  a single 3-month plan.
+                </li>
+                <li>
+                  <strong className="text-text-primary">European club competition knockout phase.</strong>{" "}
+                  Round of 16 through final is roughly 90 days end to end,
+                  ideal coverage on a quarterly billing cycle.
+                </li>
+                <li>
+                  <strong className="text-text-primary">F1 season segment.</strong>{" "}
+                  The first 8–9 Grands Prix or the European leg fits a
+                  quarter without paying for off-season months.
+                </li>
+                <li>
+                  <strong className="text-text-primary">Cricket tour windows.</strong>{" "}
+                  Most full-tour Test + ODI + T20I home series wrap inside
+                  10–12 weeks.
+                </li>
+              </ul>
+              <p>
+                Quarterly billing also matches household budget rhythms.
+                Many subscribers tell us they prefer paying $39 once per
+                quarter over $16 every 30 days because it survives the
+                billing-day blind spot — there is no awkward week between
+                renewals where the box stops working. At $13 / month
+                effective, quarterly buyers save $9 / month vs the
+                monthly plan ($16/mo) without locking in a full year.
+              </p>
+            </div>
+          </section>
+
           {/* AUTHOR */}
           <section className="mb-16" id="author">
             <div className="mb-5 inline-flex items-center gap-3 text-[11px] font-semibold tracking-[3px] uppercase text-accent">
@@ -613,15 +662,15 @@ export default function ThreeMonthsSubscription() {
             <div className="rounded-2xl border border-border bg-bg-card p-6">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
                 <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-accent/20 text-2xl font-black text-accent">
-                  MW
+                  UPG
                 </div>
                 <div>
-                  <h3 className="mb-1 text-lg font-bold text-text-primary">Marc Whitfield</h3>
+                  <h3 className="mb-1 text-lg font-bold text-text-primary">IPTV UPG Editorial Team</h3>
                   <p className="mb-3 text-sm text-text-muted">
-                    Senior IPTV Subscription Editor · IPTV UPG · Reviewing IPTV plans since 2019
+                    Editorial team at IPTV UPG · Reviewing IPTV plans since 2019
                   </p>
                   <p className="text-sm leading-relaxed text-text-secondary">
-                    Marc has audited 40+ IPTV providers and benchmarked 2,000+ subscriptions on
+                    Our editorial team has audited 40+ IPTV providers and benchmarked 2,000+ subscriptions on
                     real-world ISPs across the US, UK, and Europe. His specialty is short-term plan
                     economics — the trial-to-paid handoff, refund-window auditing, and the
                     quarterly-to-annual upgrade decision. Reviewed by IPTV UPG&apos;s technical team

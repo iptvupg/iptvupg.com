@@ -34,7 +34,21 @@ const ALL_URLS = [
  *   curl -X POST https://www.iptvupg.com/api/indexnow
  *   curl -X POST https://www.iptvupg.com/api/indexnow -H "Content-Type: application/json" -d '{"urls":["https://www.iptvupg.com/"]}'
  */
+function isAuthorized(request: Request): boolean {
+  const expected = process.env.INDEXNOW_SECRET;
+  // If no secret is configured, the route is closed by default.
+  if (!expected) return false;
+  const provided = request.headers.get("x-indexnow-secret");
+  return provided === expected;
+}
+
 export async function POST(request: Request) {
+  if (!isAuthorized(request)) {
+    return NextResponse.json(
+      { success: false, error: "Unauthorized" },
+      { status: 401 }
+    );
+  }
   try {
     let urls = ALL_URLS;
 
@@ -80,13 +94,18 @@ export async function POST(request: Request) {
 }
 
 /**
- * GET /api/indexnow — Health check + key info
+ * GET /api/indexnow — Health check (no sensitive data exposed)
  */
-export async function GET() {
+export async function GET(request: Request) {
+  if (!isAuthorized(request)) {
+    return NextResponse.json(
+      { service: "IndexNow", status: "auth required" },
+      { status: 401 }
+    );
+  }
   return NextResponse.json({
     service: "IndexNow",
     host: HOST,
-    key: INDEXNOW_KEY,
     keyLocation: KEY_LOCATION,
     totalUrls: ALL_URLS.length,
     usage: "POST /api/indexnow to submit all URLs, or POST with {urls:[...]} for specific ones",

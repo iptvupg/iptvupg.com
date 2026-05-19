@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import WhatIsIPTV from "@/components/WhatIsIPTV";
@@ -8,6 +9,16 @@ import FAQ from "@/components/FAQ";
 import DeviceSection from "@/components/DeviceSection";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.iptvupg.com",
+    languages: {
+      "en": "https://www.iptvupg.com",
+      "x-default": "https://www.iptvupg.com",
+    },
+  },
+};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    JSON-LD Structured Data — Consolidated @graph
@@ -26,9 +37,11 @@ const structuredData = {
       url: "https://www.iptvupg.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.iptvupg.com/apple-icon",
-        width: 180,
-        height: 180,
+        "@id": "https://www.iptvupg.com/#logo",
+        url: "https://www.iptvupg.com/opengraph-image",
+        width: 1200,
+        height: 630,
+        caption: "IPTV UPG — Best IPTV Service",
       },
       description:
         "IPTV UPG is a premium IPTV service provider offering IPTV subscription plans with 24,000+ live TV channels and 120,000+ movies in 4K/UHD quality. One of the best IPTV services with 99.9% uptime and instant activation.",
@@ -59,6 +72,45 @@ const structuredData = {
       url: "https://www.iptvupg.com",
       publisher: {
         "@id": "https://www.iptvupg.com/#organization",
+      },
+    },
+
+    /* ── SERVICE ─────────────────────────────────────────────────────────
+       Reinforces "provider" nature beyond Product. Helps AI engines and
+       Google understand IPTV UPG offers an ongoing service, not a SKU. */
+    {
+      "@type": "Service",
+      "@id": "https://www.iptvupg.com/#service",
+      name: "IPTV UPG Streaming Service",
+      alternateName: "Best IPTV Service",
+      description:
+        "Premium IPTV streaming service delivering 24,000+ live TV channels and 120,000+ movies in 4K/UHD over internet protocol. 99.9% uptime, instant activation, free trial.",
+      url: "https://www.iptvupg.com",
+      provider: { "@id": "https://www.iptvupg.com/#organization" },
+      serviceType: "Internet Protocol Television (IPTV)",
+      category: "Streaming Service",
+      areaServed: { "@type": "Place", name: "Worldwide" },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "IPTV UPG Subscription Plans",
+        itemListElement: [
+          { "@type": "Offer", name: "1 Month IPTV Plan", price: "16.00", priceCurrency: "USD", url: "https://www.iptvupg.com/1-month-iptv-subscription" },
+          { "@type": "Offer", name: "3 Month IPTV Plan", price: "39.00", priceCurrency: "USD", url: "https://www.iptvupg.com/3-months-iptv-subscription" },
+          { "@type": "Offer", name: "6 Month IPTV Plan", price: "60.00", priceCurrency: "USD", url: "https://www.iptvupg.com/6-months-iptv-subscription" },
+          { "@type": "Offer", name: "12 Month IPTV Plan", price: "90.00", priceCurrency: "USD", url: "https://www.iptvupg.com/12-months-iptv-subscription" },
+        ],
+      },
+    },
+
+    /* ── SPEAKABLE — voice-assistant paragraph selection ──────────────── */
+    {
+      "@type": "WebPage",
+      "@id": "https://www.iptvupg.com/#webpage",
+      url: "https://www.iptvupg.com",
+      isPartOf: { "@id": "https://www.iptvupg.com/#website" },
+      speakable: {
+        "@type": "SpeakableSpecification",
+        cssSelector: ["h1", ".speakable"],
       },
     },
 
@@ -106,13 +158,14 @@ const structuredData = {
       brand: {
         "@id": "https://www.iptvupg.com/#organization",
       },
+      sameAs: "https://www.trustpilot.com/review/iptvupg.com",
       offers: [
         {
           "@type": "Offer",
           name: "1 Month Plan",
           price: "16.00",
           priceCurrency: "USD",
-          priceValidUntil: "2027-04-06",
+          priceValidUntil: "2027-12-31",
           availability: "https://schema.org/InStock",
           url: "https://www.iptvupg.com/1-month-iptv-subscription",
           itemCondition: "https://schema.org/NewCondition",
@@ -128,7 +181,7 @@ const structuredData = {
           name: "3 Month Plan",
           price: "39.00",
           priceCurrency: "USD",
-          priceValidUntil: "2027-04-06",
+          priceValidUntil: "2027-12-31",
           availability: "https://schema.org/InStock",
           url: "https://www.iptvupg.com/3-months-iptv-subscription",
           itemCondition: "https://schema.org/NewCondition",
@@ -144,7 +197,7 @@ const structuredData = {
           name: "6 Month Plan",
           price: "60.00",
           priceCurrency: "USD",
-          priceValidUntil: "2027-04-06",
+          priceValidUntil: "2027-12-31",
           availability: "https://schema.org/InStock",
           url: "https://www.iptvupg.com/6-months-iptv-subscription",
           itemCondition: "https://schema.org/NewCondition",
@@ -160,7 +213,7 @@ const structuredData = {
           name: "12 Month Plan",
           price: "90.00",
           priceCurrency: "USD",
-          priceValidUntil: "2027-04-06",
+          priceValidUntil: "2027-12-31",
           availability: "https://schema.org/InStock",
           url: "https://www.iptvupg.com/12-months-iptv-subscription",
           itemCondition: "https://schema.org/NewCondition",

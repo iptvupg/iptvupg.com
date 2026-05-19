@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     "IPTV on Samsung TV setup using Smart IPTV, IPTV Smarters, or SS IPTV. Stream 24,000+ channels on Tizen OS in HD and 4K with IPTV UPG.",
   alternates: {
     canonical: "https://www.iptvupg.com/samsung-tv-iptv",
+    languages: {
+      "en": "https://www.iptvupg.com/samsung-tv-iptv",
+      "x-default": "https://www.iptvupg.com/samsung-tv-iptv",
+    },
   },
   openGraph: {
     title: "IPTV on Samsung TV: Smart TV Setup Guide 2026",
@@ -261,6 +265,28 @@ export default function SamsungTvIptv() {
               </h3>
               <p>
                 Clear the app cache by going to Settings &gt; Support &gt; Device Care &gt; Manage Storage, selecting the IPTV app, and choosing Clear Cache. If the app continues to crash, uninstall it completely and reinstall from the Samsung App Store. Also check for Tizen OS updates under Settings &gt; Support &gt; Software Update — running an outdated OS can cause app compatibility issues.
+              </p>
+            </section>
+
+            {/* Device-Specific Compatibility */}
+            <section>
+              <h2 className="mb-4 text-xl font-bold text-text-primary">
+                Samsung Smart TV Models &amp; Tizen Compatibility
+              </h2>
+              <p>
+                Samsung TVs run Tizen OS, and the Tizen version (which is tied to the TV&apos;s model year) determines which IPTV apps are still available in the Samsung Smart Hub and how reliably they play 4K HEVC.
+              </p>
+              <ul className="mt-3 list-disc space-y-1.5 pl-6">
+                <li><strong className="text-text-primary">Samsung QN90 / S90 / S95 (2023-2024) — Tizen 7.0/8.0:</strong> Neo Quantum / Neural Quantum processors. Full 4K HDR10+ — Smart IPTV and OTT Player Lite both run flawlessly with IPTV UPG.</li>
+                <li><strong className="text-text-primary">Samsung Q60-Q80 / Crystal UHD 2021-2022 — Tizen 6.0/6.5:</strong> Quad-core; 4K HEVC stable. Smart IPTV still installs but requires re-licensing on a TV factory reset.</li>
+                <li><strong className="text-text-primary">Samsung 2019-2020 (NU/RU/TU series) — Tizen 4.0/5.5:</strong> Some IPTV apps removed from Samsung Smart Hub in 2024; SS IPTV often still available regionally.</li>
+                <li><strong className="text-text-primary">Samsung pre-2018 — Tizen 3.x or older:</strong> Smart Hub no longer receives new apps. Use a Fire Stick or Android box via HDMI for a current IPTV experience.</li>
+              </ul>
+              <p className="mt-3">
+                <strong className="text-text-primary">Smart IPTV one-time licensing fee:</strong> Smart IPTV (siptv.app) requires a small one-time licensing payment per MAC address after a 7-day trial. If you sell or replace the TV, that license doesn&apos;t transfer to the new MAC — budget for re-licensing or use SS IPTV (free) instead. Both load M3U URLs from IPTV UPG&apos;s portal.
+              </p>
+              <p className="mt-3">
+                <strong className="text-text-primary">Tizen sideloading limits:</strong> Unlike LG, Samsung Tizen TVs can&apos;t practically sideload third-party apps without a Tizen Studio dev account, a paired developer device, and re-signing every 14 days. Stick to Smart Hub apps. If a previously installed app disappears, it was removed from your region&apos;s Smart Hub — switch to an alternative like SS IPTV or use a $30 Android stick on HDMI.
               </p>
             </section>
 

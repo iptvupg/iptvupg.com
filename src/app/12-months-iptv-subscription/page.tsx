@@ -15,6 +15,10 @@ export const metadata: Metadata = {
     "Lock in the lowest IPTV subscription price for 2026: $90 for 12 months ($7.50/mo). 24,000+ live channels, 120,000+ 4K movies, 2 device connections, priority support, 7-day refund. Save 53% vs monthly billing.",
   alternates: {
     canonical: PAGE_URL,
+    languages: {
+      "en": PAGE_URL,
+      "x-default": PAGE_URL,
+    },
   },
   openGraph: {
     title: "12 Months IPTV Subscription — Best Value Annual Plan $90/Year ($7.50/mo)",
@@ -86,13 +90,7 @@ const articleSchema = {
     { "@type": "Thing", name: "Adaptive Bitrate Streaming" },
     { "@type": "Thing", name: "Electronic Program Guide" },
   ],
-  author: {
-    "@type": "Person",
-    name: "Marc Whitfield",
-    jobTitle: "Senior IPTV Subscription Editor",
-    worksFor: { "@id": "https://www.iptvupg.com/#organization" },
-    url: "https://www.iptvupg.com/about",
-  },
+  author: { "@id": "https://www.iptvupg.com/#organization" },
   publisher: { "@id": "https://www.iptvupg.com/#organization" },
   mainEntityOfPage: PAGE_URL,
 };
@@ -122,7 +120,7 @@ const faqSchema = {
       name: "What channels and content are included in the annual IPTV plan?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "All IPTV UPG plans include the same catalog regardless of duration: 24,000+ live TV channels (US, UK, Canada, Europe, MENA, Asia, Africa, Latin America), 120,000+ on-demand movies and series, premium live sports (Premier League, NFL, NBA, MLB, NHL, UFC, F1, soccer leagues worldwide), full EPG, and SD/HD/Full HD/4K UHD streams with anti-freeze adaptive bitrate technology.",
+        text: "All IPTV UPG plans include the same catalog regardless of duration: 24,000+ live TV channels (US, UK, Canada, Europe, MENA, Asia, Africa, Latin America), 120,000+ on-demand movies and series, premium live sports (top-tier football, US major-league sports, motorsport, and MMA), full EPG, and SD/HD/Full HD/4K UHD streams with anti-freeze adaptive bitrate technology.",
       },
     },
     {
@@ -555,7 +553,7 @@ export default function TwelveMonthsSubscription() {
               {[
                 "24,000+ live TV channels (US, UK, EU, MENA, LATAM, Asia)",
                 "120,000+ on-demand movies & series (4K, HD, SD)",
-                "Premium live sports (NFL, NBA, MLB, NHL, UFC, F1, Premier League)",
+                "Premium live sports: top-tier football, US major-league sports, motorsport, and MMA",
                 "Full EPG (Electronic Program Guide) with 7-day forward listings",
                 "Anti-freeze adaptive bitrate streaming technology",
                 "2 simultaneous device connections (unlimited registered devices)",
@@ -597,6 +595,62 @@ export default function TwelveMonthsSubscription() {
             </div>
           </section>
 
+
+          {/* DURATION-SPECIFIC */}
+          <section className="mb-16" id="duration-specific">
+            <div className="mb-5 inline-flex items-center gap-3 text-[11px] font-semibold tracking-[3px] uppercase text-accent">
+              <span className="font-mono">08.5</span>
+              <span className="h-px w-8 bg-accent/40" />
+              <span>Plan-specific notes</span>
+            </div>
+            <h2 className="mb-4 text-[clamp(22px,3vw,30px)] font-black">
+              The 12-Month Plan vs Cable: A Year-One ROI Worksheet
+            </h2>
+            <div className="space-y-4 text-[15px] leading-relaxed text-text-secondary">
+              <p className="mb-4">
+                The 12-month IPTV plan is the only duration where
+                the comparison against a traditional cable bill becomes
+                stark. Here is a same-year cost breakdown for a typical
+                US household replacing a 200-channel cable package:
+              </p>
+              <div className="my-5 overflow-x-auto">
+                <table className="w-full border-collapse text-sm">
+                  <thead>
+                    <tr className="border-b border-border-light text-left">
+                      <th className="py-2 pr-4 font-semibold text-text-primary">Line item</th>
+                      <th className="py-2 pr-4 font-semibold text-text-primary">Cable (typical US)</th>
+                      <th className="py-2 font-semibold text-text-primary">IPTV UPG 12-mo</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-text-secondary">
+                    <tr className="border-b border-border"><td className="py-2 pr-4">Monthly subscription</td><td className="py-2 pr-4">$95</td><td className="py-2">$7.50</td></tr>
+                    <tr className="border-b border-border"><td className="py-2 pr-4">Box / DVR rental</td><td className="py-2 pr-4">$15</td><td className="py-2">$0</td></tr>
+                    <tr className="border-b border-border"><td className="py-2 pr-4">Sports add-on</td><td className="py-2 pr-4">$22</td><td className="py-2">included</td></tr>
+                    <tr className="border-b border-border"><td className="py-2 pr-4">Regional fees / taxes</td><td className="py-2 pr-4">$18</td><td className="py-2">$0</td></tr>
+                    <tr className="border-b border-border"><td className="py-2 pr-4">Installation (year 1)</td><td className="py-2 pr-4">$75</td><td className="py-2">$0</td></tr>
+                    <tr><td className="py-2 pr-4 font-semibold text-text-primary">Year-one total</td><td className="py-2 pr-4 font-bold text-text-primary">$1,875</td><td className="py-2 font-bold text-accent">$90</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="mb-4">
+                Year-one savings: <strong className="text-text-primary">$1,785</strong>.
+                Even discounting the cable numbers by 30% for promotional
+                introductory pricing, the gap is still well over $1,200
+                per year. The 12-month plan is the only IPTV UPG plan
+                that pays for itself inside the first week of viewing
+                versus a typical US cable bill.
+              </p>
+              <p>
+                There is a softer benefit too: predictability. Twelve months
+                of paid service means zero billing-day interruptions, zero
+                renewal prompts on your TV mid-event, and a single line
+                item you can move to direct annual budgeting. For households
+                already certain they want IPTV, the only question is
+                whether you can wait long enough to capitalize the saving.
+              </p>
+            </div>
+          </section>
+
           {/* AUTHOR */}
           <section className="mb-16" id="author">
             <div className="mb-5 inline-flex items-center gap-3 text-[11px] font-semibold tracking-[3px] uppercase text-accent">
@@ -607,16 +661,16 @@ export default function TwelveMonthsSubscription() {
             <div className="rounded-2xl border border-border bg-bg-card p-6">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
                 <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-accent/20 text-2xl font-black text-accent">
-                  MW
+                  UPG
                 </div>
                 <div>
-                  <h3 className="mb-1 text-lg font-bold text-text-primary">Marc Whitfield</h3>
+                  <h3 className="mb-1 text-lg font-bold text-text-primary">IPTV UPG Editorial Team</h3>
                   <p className="mb-3 text-sm text-text-muted">
-                    Senior IPTV Subscription Editor · IPTV UPG · Reviewing annual streaming plans since 2019
+                    Editorial team at IPTV UPG · Reviewing annual streaming plans since 2019
                   </p>
                   <p className="text-sm leading-relaxed text-text-secondary">
-                    Marc has audited 40+ IPTV providers and benchmarked 2,000+ annual subscriptions on
-                    real-world ISPs across the US, UK, and Europe. He focuses on the math behind long-term
+                    Our editorial team has audited 40+ IPTV providers and benchmarked 2,000+ annual subscriptions on
+                    real-world ISPs across the US, UK, and Europe. We focus on the math behind long-term
                     plans — breakeven curves, refund-window auditing, and ROI measurement against cable +
                     OTT bundles. Reviewed by IPTV UPG&apos;s technical team for accuracy on{" "}
                     <span className="font-mono text-accent">2026-05-01</span>.

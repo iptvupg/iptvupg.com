@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     "IPTV on Mac setup using IINA, VLC, or GSE Smart IPTV. Stream 24,000+ live channels in 4K on any MacBook or iMac with IPTV UPG.",
   alternates: {
     canonical: "https://www.iptvupg.com/macos-iptv",
+    languages: {
+      "en": "https://www.iptvupg.com/macos-iptv",
+      "x-default": "https://www.iptvupg.com/macos-iptv",
+    },
   },
   openGraph: {
     title: "IPTV on Mac: macOS Setup Guide with IINA & VLC 2026",
@@ -257,6 +261,28 @@ export default function MacOsIptv() {
               </h3>
               <p>
                 If streams fail to connect, check System Settings &gt; Network &gt; Firewall. Either turn off the firewall temporarily to test, or add your IPTV player to the list of allowed applications. Also make sure any third-party security software (such as Little Snitch or Lulu) is not blocking outgoing connections from the player.
+              </p>
+            </section>
+
+            {/* Device-Specific Compatibility */}
+            <section>
+              <h2 className="mb-4 text-xl font-bold text-text-primary">
+                macOS Hardware &amp; Player Compatibility
+              </h2>
+              <p>
+                Apple Silicon (M1/M2/M3/M4) changed the macOS IPTV landscape — hardware HEVC decode is universal, and you can run any iOS IPTV app natively from the Mac App Store. Older Intel Macs require more care around codec choice.
+              </p>
+              <ul className="mt-3 list-disc space-y-1.5 pl-6">
+                <li><strong className="text-text-primary">Apple Silicon Macs (M1+):</strong> Run IPTV Smarters Pro from the iOS App Store side via the &quot;iPhone &amp; iPad Apps&quot; tab — instant Xtream Codes login, 4K HEVC plays at &lt;5% CPU.</li>
+                <li><strong className="text-text-primary">Intel Macs (2018-2020, T2 chip):</strong> Hardware HEVC decode available; use IINA (Apple Silicon &amp; Intel universal binary) with M3U URL playback, or VLC 3.0.20+ for advanced subtitle handling.</li>
+                <li><strong className="text-text-primary">Intel Macs (pre-2018, no T2):</strong> HEVC decodes on CPU — expect 30-60% CPU usage at 4K. Stick to 1080p HEVC or H.264 streams; use GSE Smart IPTV from the Mac App Store under Catalyst.</li>
+                <li><strong className="text-text-primary">macOS version requirements:</strong> IINA needs macOS 11+; VLC works on 10.13+; the iOS-on-Mac apps require macOS 12.0+ and Apple Silicon.</li>
+              </ul>
+              <p className="mt-3">
+                <strong className="text-text-primary">Network &amp; firewall considerations:</strong> macOS&apos;s firewall (System Settings → Network → Firewall) does not block outbound IPTV by default, but corporate or school Macs with MDM profiles may block Xtream Codes ports (8080, 8880, 25461). If channels fail to load while Safari and Mail work fine, try a personal hotspot temporarily — if it works there, the issue is the corporate proxy.
+              </p>
+              <p className="mt-3">
+                <strong className="text-text-primary">Output to a 4K TV:</strong> When mirroring to an external display via HDMI or AirPlay 4K, force the display refresh rate to 60Hz in Displays preferences — some 4K TVs default to 30Hz over HDMI, which causes IPTV streams to look juddery on horizontal pans during sports.
               </p>
             </section>
 

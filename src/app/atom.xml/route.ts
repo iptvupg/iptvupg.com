@@ -3,11 +3,32 @@ const ogImage = `${baseUrl}/opengraph-image`;
 
 const pages = [
   {
+    title: "What is IPTV? The Complete 2026 Guide",
+    url: `${baseUrl}/what-is-iptv`,
+    summary: "Internet Protocol Television explained — how it works, devices, pricing, and legality in 2026.",
+    created: "2024-08-10T00:00:00Z",
+    modified: "2026-05-01T00:00:00Z",
+  },
+  {
+    title: "Best IPTV Service in 2026 — Verified Comparison",
+    url: `${baseUrl}/best-iptv-service`,
+    summary: "Seven buying criteria for picking the best IPTV service in 2026, plus how IPTV UPG scores against each one.",
+    created: "2024-09-20T00:00:00Z",
+    modified: "2026-05-01T00:00:00Z",
+  },
+  {
+    title: "IPTV Subscription Plans — From $7.50/Month",
+    url: `${baseUrl}/iptv-subscription`,
+    summary: "Compare IPTV UPG subscription plans by duration, price, and value. 24,000+ channels, 4K, 7-day money-back.",
+    created: "2024-09-20T00:00:00Z",
+    modified: "2026-05-01T00:00:00Z",
+  },
+  {
     title: "IPTV Free Trial — Test 24,000+ Channels Before You Buy",
     url: `${baseUrl}/iptv-free-trial`,
-    summary: "Try IPTV UPG free. Full access to 24,000+ live channels and 120,000+ movies in 4K. No credit card required, instant activation.",
+    summary: "Try IPTV UPG free for 24 hours. Full access to 24,000+ live channels and 120,000+ movies in 4K. No credit card required, instant activation.",
     created: "2026-04-06T00:00:00Z",
-    modified: "2026-04-06T00:00:00Z",
+    modified: "2026-05-19T00:00:00Z",
   },
   {
     title: "12 Months IPTV Subscription — Best Value Plan $90/Year",
@@ -102,12 +123,12 @@ export async function GET() {
     <title>${escapeXml(page.title)}</title>
     <link rel="alternate" type="text/html" href="${page.url}" />
     <id>${page.url}</id>
-    <issued>${page.created}</issued>
-    <modified>${page.modified}</modified>
-    <summary type="text/plain">${escapeXml(page.summary)}</summary>
+    <published>${page.created}</published>
+    <updated>${page.modified}</updated>
+    <summary type="text">${escapeXml(page.summary)}</summary>
     <author>
       <name>IPTV UPG</name>
-      <url>${baseUrl}</url>
+      <uri>${baseUrl}</uri>
       <email>support@iptvupg.com</email>
     </author>
   </entry>`
@@ -115,19 +136,18 @@ export async function GET() {
     .join("\n");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<feed version="0.3" xmlns="http://purl.org/atom/ns#">
+<feed xmlns="http://www.w3.org/2005/Atom">
   <title>IPTV UPG — Best IPTV Service 2026</title>
   <link rel="alternate" type="text/html" href="${baseUrl}" />
   <link rel="self" type="application/atom+xml" href="${baseUrl}/atom.xml" />
-  <tagline>Premium IPTV subscription service with 24,000+ live channels and 120,000+ movies in 4K. Setup guides, subscription plans, and free trial.</tagline>
+  <subtitle>Premium IPTV subscription service with 24,000+ live channels and 120,000+ movies in 4K. Setup guides, subscription plans, and free trial.</subtitle>
   <id>${baseUrl}/atom.xml</id>
-  <modified>${new Date().toISOString()}</modified>
-  <generator url="${baseUrl}" version="1.0">IPTV UPG / Next.js</generator>
-  <copyright>IPTV UPG 2026. All rights reserved.</copyright>
-  <info>Atom 0.3 feed for IPTV UPG — premium IPTV service provider.</info>
+  <updated>${new Date().toISOString()}</updated>
+  <generator uri="${baseUrl}" version="1.0">IPTV UPG / Next.js</generator>
+  <rights>IPTV UPG 2026. All rights reserved.</rights>
   <author>
     <name>IPTV UPG</name>
-    <url>${baseUrl}</url>
+    <uri>${baseUrl}</uri>
     <email>support@iptvupg.com</email>
   </author>
 ${entries}

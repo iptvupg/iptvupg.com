@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     "IPTV on Android setup in 5 minutes. Install TiviMate or IPTV Smarters on any phone, tablet, or TV box. 24,000+ channels in 4K with IPTV UPG.",
   alternates: {
     canonical: "https://www.iptvupg.com/android-iptv",
+    languages: {
+      "en": "https://www.iptvupg.com/android-iptv",
+      "x-default": "https://www.iptvupg.com/android-iptv",
+    },
   },
   openGraph: {
     title: "IPTV on Android: Setup Guide for Phones & TV Boxes 2026",
@@ -252,6 +256,29 @@ export default function AndroidIptv() {
               </h3>
               <p>
                 Some IPTV apps may not appear in Google Play on certain Android TV devices due to compatibility flags. In that case, download the APK directly from the developer website and sideload it. Enable Unknown Sources in Settings &gt; Security, then install the APK using a file manager. Alternatively, use the Downloader app (available on Google Play) to download and install APKs via URL.
+              </p>
+            </section>
+
+            {/* Device-Specific Compatibility */}
+            <section>
+              <h2 className="mb-4 text-xl font-bold text-text-primary">
+                Android Hardware Models &amp; Player Compatibility
+              </h2>
+              <p>
+                Not every Android TV box delivers the same IPTV experience. The chipset, RAM ceiling, and Android build version dictate which player apps run smoothly and whether 4K HEVC playback stays smooth across long viewing sessions.
+              </p>
+              <ul className="mt-3 list-disc space-y-1.5 pl-6">
+                <li><strong className="text-text-primary">Nvidia Shield TV (2019, Pro):</strong> Tegra X1+ — flawless 4K HDR with TiviMate, only box that hardware-decodes Dolby Vision profile 5 streams reliably.</li>
+                <li><strong className="text-text-primary">Formuler Z11 Pro Max / CC:</strong> Hi3798MV200 — purpose-built for IPTV, comes with MyTVOnline preloaded, native catch-up support.</li>
+                <li><strong className="text-text-primary">Xiaomi Mi Box S / TV Stick 4K:</strong> Amlogic S905X4 — solid budget choice for 4K HDR10+; avoid 2GB RAM variants for TiviMate Premium with multiple playlists.</li>
+                <li><strong className="text-text-primary">Chromecast with Google TV (HD/4K):</strong> Works well; sideload TiviMate via Downloader if Play Store filters it on your account.</li>
+                <li><strong className="text-text-primary">Generic S905W/S905L boxes:</strong> Stick to IPTV Smarters Pro and 1080p streams — these chips drop frames on 4K HEVC at 60 fps.</li>
+              </ul>
+              <p className="mt-3">
+                <strong className="text-text-primary">Android OS version matters:</strong> Android 10+ exposes the AV1 hardware decoder on supported chips, which matters as more IPTV UPG VOD titles ship AV1 encodes. On Android 7-9, force HEVC in player settings to avoid software-decoding AV1 on CPU. For phones, GPU drivers on Mediatek Helio G-series can stutter 4K HEVC — switch TiviMate&apos;s decoder to software for those handsets, or stay on 1080p.
+              </p>
+              <p className="mt-3">
+                <strong className="text-text-primary">Remote-friendly setup:</strong> If your TV box ships a basic IR remote without a D-pad center button, install the Android Mouse Toggle utility before TiviMate so you can confirm the playlist entry dialog. Google TV remotes work natively with all three apps recommended above.
               </p>
             </section>
 

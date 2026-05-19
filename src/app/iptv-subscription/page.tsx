@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Packages from "@/components/Packages";
-import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 
 const PAGE_URL = "https://www.iptvupg.com/iptv-subscription";
@@ -17,6 +16,10 @@ export const metadata: Metadata = {
     "Compare IPTV UPG subscription plans for 2026: monthly $16, 3 months $39, 6 months $60, and 12 months $90 (best value, $7.50/mo). 24,000+ channels, 120,000+ 4K movies, 7-day money-back guarantee on every plan.",
   alternates: {
     canonical: PAGE_URL,
+    languages: {
+      "en": PAGE_URL,
+      "x-default": PAGE_URL,
+    },
   },
   openGraph: {
     title: "IPTV Subscription Plans — Best IPTV Service From $7.50/Month",
@@ -64,36 +67,36 @@ const plansData = [
 
 const faqs = [
   {
-    q: "What is an IPTV subscription?",
-    a: "An IPTV subscription is a paid service that delivers live TV channels and on-demand video over the internet instead of cable, satellite, or terrestrial signals. With IPTV UPG you subscribe by duration (1, 3, 6, or 12 months), receive activation credentials, install any free IPTV player on your device, and stream 24,000+ live channels and 120,000+ on-demand titles in HD and 4K.",
+    q: "Which IPTV subscription plan is best value for the money?",
+    a: "The 12-month plan at $90 ($7.50/month) is the lowest per-month cost — 53% cheaper per month than the 1-month plan at $16. If a year feels too long, the 6-month plan at $60 ($10/month) still saves 37% versus monthly billing and is the most popular cycle among IPTV UPG subscribers.",
   },
   {
-    q: "How much does an IPTV subscription cost?",
-    a: "IPTV UPG subscription plans for 2026 are $16 for 1 month, $39 for 3 months ($13/mo), $60 for 6 months ($10/mo), and $90 for 12 months ($7.50/mo). The annual plan is the best value at 53% off the monthly rate, and every plan unlocks the same library and features.",
+    q: "How is the per-month price calculated on the longer plans?",
+    a: "The advertised per-month price is the plan total divided by the number of months — there is no extra billing during the term. 3 months for $39 = $13/month, 6 months for $60 = $10/month, 12 months for $90 = $7.50/month. You pay the full plan price once and stream for the entire duration.",
   },
   {
-    q: "Which IPTV subscription plan is best for me?",
-    a: "Choose the 1-month plan if you want to try IPTV without commitment. Pick the 3-month plan for seasonal sports or a single TV series run. The 6-month plan is the sweet spot for households that want strong savings without a year-long commitment. The 12-month plan delivers the lowest per-month price ($7.50) and bonus VIP channels — best for anyone confident IPTV UPG is their long-term streaming setup.",
+    q: "Can I switch from a 1-month to a 12-month plan later without losing time?",
+    a: "Yes. When you upgrade durations, IPTV UPG support will credit the remaining unused days on your current plan against the new plan's start date so you do not lose any subscription time. Contact support before your current plan expires to coordinate the upgrade.",
   },
   {
-    q: "Is there a free trial before I subscribe?",
-    a: "Yes. Every visitor can request a free IPTV trial before paying. The trial gives full access to the live channel library and on-demand catalog so you can verify channel availability, stream quality on your specific device, and overall reliability on your home internet before choosing a paid subscription plan.",
+    q: "Do longer subscription plans include the same channels and 4K quality?",
+    a: "Yes — every paid plan (1, 3, 6, and 12 months) unlocks the identical channel lineup of 24,000+ live channels and 120,000+ on-demand titles in HD and 4K. The only differences are duration, total price, and that the 12-month plan adds 7 bonus VIP channels plus priority support.",
   },
   {
-    q: "What's included in every IPTV subscription plan?",
-    a: "Every plan includes 24,000+ live channels, 120,000+ on-demand movies and series, HD and 4K streaming, anti-freeze adaptive bitrate, full EPG (electronic program guide), 2 simultaneous device connections, 24/7 support, instant activation, and a 7-day money-back guarantee. The 12-month plan adds priority support and 7 bonus VIP channels.",
+    q: "Is there a setup fee or activation charge on top of the subscription price?",
+    a: "No. Every advertised price is the total — there are no setup fees, activation charges, equipment rentals, or hidden taxes. You bring your own device (Smart TV, Fire Stick, Android box, phone), install a free IPTV player, and use the credentials IPTV UPG emails you.",
   },
   {
-    q: "Do IPTV subscriptions auto-renew?",
-    a: "No. IPTV UPG plans are one-time purchases by duration — there is no auto-renewal and no recurring charge. When your plan ends you choose whether to renew, and you can switch durations at any renewal point.",
+    q: "Do IPTV UPG subscriptions auto-renew?",
+    a: "No. IPTV UPG plans are one-time purchases by duration — there is no auto-renewal, no recurring card charge, and no surprise rebill. When the plan ends, the account simply stops streaming and you decide whether to renew. You can switch durations at any renewal.",
   },
   {
-    q: "Can I get a refund if the subscription doesn't work for me?",
-    a: "Yes. Every IPTV UPG subscription is backed by a 7-day money-back guarantee. If the service does not meet expectations within the first 7 days, contact support for a full refund — no questions asked.",
+    q: "What happens at the end of my subscription term?",
+    a: "Your live streams and VOD library access stop on the final day of the plan. You will receive a renewal reminder a few days before expiry. There is no automatic cancellation fee, no contract obligation, and no penalty for not renewing — accounts simply pause until you renew.",
   },
   {
-    q: "What devices work with the subscription?",
-    a: "An IPTV UPG subscription works on Smart TVs (Samsung, LG, Sony), Amazon Fire TV Stick, Apple TV, Android TV boxes, Roku, MAG boxes, Windows and macOS computers, iOS and Android phones and tablets, and any other device that supports a standards-compliant IPTV player like IPTV Smarters Pro, TiviMate, or GSE Smart IPTV.",
+    q: "Can I pause or freeze my subscription if I am traveling?",
+    a: "IPTV UPG does not currently pause subscriptions, but the streams travel with you — log in from anywhere in the world (your two device slots cover home and travel). If you need an extended pause beyond a vacation, the lower-cost 1-month plan is usually the cheapest way to bridge a short gap.",
   },
 ];
 
@@ -439,8 +442,42 @@ export default function IPTVSubscriptionPage() {
           </div>
         </section>
 
-        {/* FAQ */}
-        <FAQ />
+        {/* Subscription-specific FAQ */}
+        <section className="px-6 py-20" id="faq" aria-label="Subscription plan FAQ">
+          <div className="mx-auto max-w-[900px]">
+            <div className="mb-10 text-center">
+              <div className="mb-5 inline-flex items-center gap-3 text-[11px] font-semibold tracking-[3px] uppercase text-accent">
+                <span className="font-mono">FAQ</span>
+                <span className="h-px w-8 bg-accent/40" />
+                <span>Subscription Plans</span>
+              </div>
+              <h2 className="text-[clamp(26px,3.6vw,38px)] font-black">
+                Subscription Plan Questions Answered
+              </h2>
+              <p className="mt-3 text-sm text-text-muted">
+                Plan-specific billing, upgrade, and renewal questions. For general IPTV questions, see the <Link href="/#faq" className="text-accent hover:underline">homepage FAQ</Link>.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3">
+              {faqs.map((faq, i) => (
+                <details
+                  key={i}
+                  className="group overflow-hidden rounded-2xl border border-border bg-bg-card shadow-[0_4px_20px_rgba(0,0,0,0.25)] transition-all open:border-dashed open:border-border-light"
+                >
+                  <summary className="flex w-full cursor-pointer items-center gap-4 px-6 py-5 text-left transition-colors hover:bg-bg-card-hover [&::-webkit-details-marker]:hidden list-none">
+                    <span className="min-w-[32px] text-sm font-bold text-text-muted group-open:text-accent">
+                      {String(i + 1).padStart(2, "0")}.
+                    </span>
+                    <h3 className="flex-1 text-[15px] font-semibold">{faq.q}</h3>
+                  </summary>
+                  <div className="px-6 pb-6 pl-[72px] text-sm leading-relaxed text-text-secondary">
+                    {faq.a}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Final CTA */}
         <FinalCTA />

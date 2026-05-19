@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { INDEXABLE_COUNTRY_SLUGS } from "@/data/country-pages";
 
 /**
  * XML sitemap.
@@ -45,6 +46,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/fire-tv-iptv`, lastModified: standardLastMod },
     { url: `${baseUrl}/mag-iptv`, lastModified: standardLastMod },
     { url: `${baseUrl}/apple-tv-iptv`, lastModified: standardLastMod },
+
+    // ── Country hub
+    { url: `${baseUrl}/countries`, lastModified: pillarLastMod },
+
+    // ── Per-country programmatic pages (only the entries whose copy has been
+    //    DMCA-rewritten with safe category descriptors; the rest are
+    //    `noindex` and intentionally absent from the sitemap until rewritten).
+    ...INDEXABLE_COUNTRY_SLUGS.map((slug) => ({
+      url: `${baseUrl}/best-iptv-service-in/${slug}`,
+      lastModified: pillarLastMod,
+    })),
+
+    // ── Free tools
+    { url: `${baseUrl}/m3u-xtream-converter`, lastModified: pillarLastMod },
 
     // ── About
     { url: `${baseUrl}/about`, lastModified: standardLastMod },

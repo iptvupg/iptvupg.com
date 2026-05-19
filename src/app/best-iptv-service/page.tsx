@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     "The best IPTV service in 2026, ranked. Compare top IPTV providers on channel count, 4K quality, EPG, devices, support, and price. IPTV UPG: 24,000+ channels, 4.9/5 rating, free trial.",
   alternates: {
     canonical: "https://www.iptvupg.com/best-iptv-service",
+    languages: {
+      "en": "https://www.iptvupg.com/best-iptv-service",
+      "x-default": "https://www.iptvupg.com/best-iptv-service",
+    },
   },
   openGraph: {
     title: "Best IPTV Service in 2026 — 24,000+ Channels in 4K from $7.50/mo",
@@ -35,18 +39,16 @@ const articleSchema = {
   datePublished: "2024-09-20",
   dateModified: "2026-05-01",
   inLanguage: "en",
-  author: {
-    "@type": "Organization",
-    "@id": "https://www.iptvupg.com/#organization",
-    name: "IPTV UPG Editorial Team",
-    url: "https://www.iptvupg.com",
-  },
-  publisher: {
-    "@type": "Organization",
-    "@id": "https://www.iptvupg.com/#organization",
-    name: "IPTV UPG",
-    logo: { "@type": "ImageObject", url: "https://www.iptvupg.com/logo.png" },
-  },
+  image: [
+    {
+      "@type": "ImageObject",
+      url: "https://www.iptvupg.com/opengraph-image",
+      width: 1200,
+      height: 630,
+    },
+  ],
+  author: { "@id": "https://www.iptvupg.com/#organization" },
+  publisher: { "@id": "https://www.iptvupg.com/#organization" },
   about: [
     { "@type": "Thing", name: "IPTV" },
     { "@type": "Thing", name: "IPTV service" },
@@ -167,14 +169,25 @@ const faqSchema = {
   ],
 };
 
-const itemListSchema = {
+// This is the IPTV UPG buying-criteria checklist, NOT a competitor ranking.
+// We do not publish self-ranked listicles of our own service against unnamed
+// competitors — that pattern conflicts with Google QRG guidance. Instead we
+// document the seven criteria a shopper should use, then explain how IPTV UPG
+// scores against them inline in the page body.
+const buyingCriteriaSchema = {
   "@type": "ItemList",
-  "@id": "https://www.iptvupg.com/best-iptv-service#ranking",
-  name: "Best IPTV Services 2026 — Ranked",
-  itemListOrder: "https://schema.org/ItemListOrderDescending",
-  numberOfItems: 1,
+  "@id": "https://www.iptvupg.com/best-iptv-service#criteria",
+  name: "How to Pick the Best IPTV Service in 2026 — 7 Buying Criteria",
+  itemListOrder: "https://schema.org/ItemListOrderAscending",
+  numberOfItems: 7,
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "IPTV UPG", url: "https://www.iptvupg.com" },
+    { "@type": "ListItem", position: 1, name: "Verified channel count (not marketing copy)" },
+    { "@type": "ListItem", position: 2, name: "True 4K / UHD on the full catalog" },
+    { "@type": "ListItem", position: 3, name: "Anti-freeze adaptive bitrate (HLS/DASH)" },
+    { "@type": "ListItem", position: 4, name: "Independently verified uptime (≥ 99.9%)" },
+    { "@type": "ListItem", position: 5, name: "Accurate, full Electronic Program Guide (EPG)" },
+    { "@type": "ListItem", position: 6, name: "Sub-5-minute support response on a real channel (WhatsApp / live chat)" },
+    { "@type": "ListItem", position: 7, name: "No-credit-card free trial before any payment" },
   ],
 };
 
@@ -388,7 +401,7 @@ export default function BestIptvService() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": [breadcrumbSchema, articleSchema, productSchema, itemListSchema, faqSchema],
+            "@graph": [breadcrumbSchema, articleSchema, productSchema, buyingCriteriaSchema, faqSchema],
           }),
         }}
       />

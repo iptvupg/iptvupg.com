@@ -16,7 +16,7 @@ export default function Reviews() {
           <div className="mb-5 inline-flex items-center gap-3 text-[11px] font-semibold tracking-[3px] uppercase text-accent">
             <span className="font-mono">04</span>
             <span className="h-px w-8 bg-accent/40" />
-            <span>Trusted by 12,000+ Customers</span>
+            <span>Trusted by 6,000+ Customers</span>
           </div>
           <h2 className="mb-4 text-[clamp(28px,4vw,42px)] font-black">
             Why Customers Rate IPTV UPG the Best IPTV Service of 2026

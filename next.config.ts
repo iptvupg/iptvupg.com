@@ -26,6 +26,17 @@ const nextConfig: NextConfig = {
         destination: "https://www.iptvupg.com/:path*",
         permanent: true,
       },
+      // Country hub URL change
+      {
+        source: "/iptv-by-country",
+        destination: "/countries",
+        permanent: true,
+      },
+      {
+        source: "/iptv-service-by-country",
+        destination: "/countries",
+        statusCode: 301,
+      },
     ];
   },
 
@@ -36,7 +47,7 @@ const nextConfig: NextConfig = {
       {
         source: "/(.*)",
         headers: [
-          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "X-Frame-Options", value: "DENY" },
           { key: "X-Content-Type-Options", value: "nosniff" },
           {
             key: "Referrer-Policy",
@@ -57,7 +68,7 @@ const nextConfig: NextConfig = {
                 {
                   key: "Content-Security-Policy",
                   value:
-                    "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'self'",
+                    "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
                 },
               ]
             : []),

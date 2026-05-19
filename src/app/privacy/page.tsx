@@ -8,6 +8,10 @@ export const metadata: Metadata = {
     "IPTV UPG Privacy Policy. Learn how we collect, use, and protect your personal data when you use our IPTV streaming service.",
   alternates: {
     canonical: "https://www.iptvupg.com/privacy",
+    languages: {
+      "en": "https://www.iptvupg.com/privacy",
+      "x-default": "https://www.iptvupg.com/privacy",
+    },
   },
   openGraph: {
     title: "Privacy Policy | IPTV UPG",
@@ -34,6 +38,7 @@ const pageSchema = {
       "url": "https://www.iptvupg.com/privacy",
       "name": "Privacy Policy | IPTV UPG",
       "dateModified": "2026-04-06",
+      "isPartOf": { "@id": "https://www.iptvupg.com/#website" },
       "publisher": { "@id": "https://www.iptvupg.com/#organization" },
       "breadcrumb": { "@id": "https://www.iptvupg.com/privacy#breadcrumb" },
     },

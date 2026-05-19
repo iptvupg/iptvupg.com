@@ -8,6 +8,10 @@ export const metadata: Metadata = {
     "IPTV UPG Refund Policy. 7-day money-back guarantee on all plans. Learn how to request a refund for your IPTV subscription.",
   alternates: {
     canonical: "https://www.iptvupg.com/refund",
+    languages: {
+      "en": "https://www.iptvupg.com/refund",
+      "x-default": "https://www.iptvupg.com/refund",
+    },
   },
   openGraph: {
     title: "Refund Policy — 7-Day Money-Back Guarantee | IPTV UPG",
@@ -34,6 +38,7 @@ const refundSchema = {
       "url": "https://www.iptvupg.com/refund",
       "name": "Refund Policy | IPTV UPG",
       "dateModified": "2026-04-06",
+      "isPartOf": { "@id": "https://www.iptvupg.com/#website" },
       "publisher": { "@id": "https://www.iptvupg.com/#organization" },
       "breadcrumb": { "@id": "https://www.iptvupg.com/refund#breadcrumb" },
     },

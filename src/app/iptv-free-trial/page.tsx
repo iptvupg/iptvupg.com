@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     "Get a no-credit-card IPTV free trial from IPTV UPG. Stream 24,000+ live channels and 120,000+ movies in 4K on any device. Activated in minutes via WhatsApp.",
   alternates: {
     canonical: "https://www.iptvupg.com/iptv-free-trial",
+    languages: {
+      "en": "https://www.iptvupg.com/iptv-free-trial",
+      "x-default": "https://www.iptvupg.com/iptv-free-trial",
+    },
   },
   openGraph: {
     title: "IPTV Free Trial 2026 — Test 24,000+ Channels Free | IPTV UPG",
@@ -62,7 +66,7 @@ const productSchema = {
   "@type": "Product",
   name: "IPTV UPG Free Trial",
   description:
-    "No-credit-card IPTV free trial with full access to 24,000+ live channels and 120,000+ movies in 4K.",
+    "No-credit-card 24-hour IPTV free trial with full access to 24,000+ live channels and 120,000+ movies in 4K. Request via WhatsApp at +44 7848 197761.",
   brand: { "@type": "Brand", name: "IPTV UPG" },
   offers: {
     "@type": "Offer",
@@ -70,6 +74,13 @@ const productSchema = {
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
     url: "https://www.iptvupg.com/iptv-free-trial",
+    description:
+      "No-credit-card 24-hour free trial. Request via WhatsApp at +44 7848 197761.",
+    eligibleDuration: {
+      "@type": "QuantitativeValue",
+      value: 1,
+      unitCode: "DAY",
+    },
   },
   aggregateRating: {
     "@type": "AggregateRating",
@@ -105,7 +116,7 @@ const faqSchema = {
       name: "How long does the IPTV UPG free trial last?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Long enough to fully evaluate the service — every channel, the full 4K library, the EPG, peak-hour stability, and 24/7 support — on your own devices and your own network.",
+        text: "The IPTV UPG free trial lasts 24 hours from activation. That window is intentionally long enough to evaluate every channel, the full 4K library, the EPG, peak-hour stability, and 24/7 support on your own devices and your own network.",
       },
     },
     {
@@ -268,7 +279,7 @@ const relatedArticles: { href: string; title: string; note: string }[] = [
   { href: "/fire-tv-iptv", title: "How to Install IPTV on Fire TV Stick", note: "Setup guide" },
   { href: "/samsung-tv-iptv", title: "How to Install IPTV on Samsung Smart TV", note: "Setup guide" },
   { href: "/apple-tv-iptv", title: "How to Install IPTV on Apple TV", note: "Setup guide" },
-  { href: "/is-iptv-legal", title: "Is IPTV Legal? A Plain-English Answer", note: "Legal guide" },
+  { href: "/what-is-iptv#legality", title: "Is IPTV Legal? A Plain-English Answer", note: "Legal guide" },
   { href: "/refund", title: "7-Day Money-Back Guarantee — Full Policy", note: "Policy" },
 ];
 
@@ -287,7 +298,7 @@ const faqs: { q: string; a: React.ReactNode }[] = [
   },
   {
     q: "How long does the IPTV UPG free trial last?",
-    a: "Long enough to fully evaluate the service — every channel, the full 4K library, the EPG, peak-hour stability, and 24/7 support — on your own devices and your own network.",
+    a: "The free trial lasts 24 hours from activation. That window is intentionally long enough to evaluate every channel, the full 4K library, the EPG, peak-hour stability, and 24/7 support on your own devices and your own network.",
   },
   {
     q: "What's the difference between a free IPTV trial and a free IPTV app?",

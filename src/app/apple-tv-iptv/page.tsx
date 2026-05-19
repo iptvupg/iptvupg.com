@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     "IPTV on Apple TV setup using GSE Smart IPTV, IPTV Smarters, or iPlayTV. Stream 24,000+ live channels in 4K on tvOS with IPTV UPG.",
   alternates: {
     canonical: "https://www.iptvupg.com/apple-tv-iptv",
+    languages: {
+      "en": "https://www.iptvupg.com/apple-tv-iptv",
+      "x-default": "https://www.iptvupg.com/apple-tv-iptv",
+    },
   },
   openGraph: {
     title: "IPTV on Apple TV: Setup Guide for 4K & HD 2026",
@@ -290,6 +294,28 @@ export default function AppleTvIptv() {
               </h3>
               <p>
                 Typing on the Apple TV on-screen keyboard can be frustrating. Use the Remote app on your iPhone to type text — when the Apple TV keyboard appears, the iPhone will offer a notification to type on the phone instead. You can also use Siri: press and hold the Siri button and dictate the URL character by character. Another option is to use the Xtream Codes API login method, which requires only a short server URL, username, and password — much less to type than a full M3U link.
+              </p>
+            </section>
+
+            {/* Device-Specific Compatibility */}
+            <section>
+              <h2 className="mb-4 text-xl font-bold text-text-primary">
+                Apple TV Hardware Models &amp; tvOS Compatibility
+              </h2>
+              <p>
+                Apple keeps the Apple TV lineup small, which makes compatibility predictable — but tvOS version and chip generation still affect which IPTV apps you can install and how smoothly 4K HEVC plays.
+              </p>
+              <ul className="mt-3 list-disc space-y-1.5 pl-6">
+                <li><strong className="text-text-primary">Apple TV 4K (2022, A15 Bionic):</strong> Best in class — 4K Dolby Vision, HDR10+, HEVC 10-bit hardware decode. Plays every IPTV UPG stream including AV1 1080p VOD via software.</li>
+                <li><strong className="text-text-primary">Apple TV 4K (2021, A12):</strong> Identical 4K capabilities; AV1 plays back on CPU and may stutter — prefer HEVC streams.</li>
+                <li><strong className="text-text-primary">Apple TV 4K (2017, A10X):</strong> Still supported on tvOS 17/18; HEVC 4K solid, no AV1, no Dolby Vision Profile 8.1.</li>
+                <li><strong className="text-text-primary">Apple TV HD (4th gen, A8):</strong> Capped at 1080p — fine for IPTV UPG&apos;s SD/HD live channel mix, drop to 720p in app settings if buffering occurs.</li>
+              </ul>
+              <p className="mt-3">
+                <strong className="text-text-primary">tvOS version requirements:</strong> GSE Smart IPTV requires tvOS 14+; iPlayTV requires tvOS 13+; IPTV Smarters Pro requires tvOS 12+. If you are on tvOS 11 or earlier (rare), Apple no longer ships updates — upgrade the hardware. App Store IPTV apps in tvOS cannot sideload via Xcode without a paid Apple Developer account, so stick to App Store options or use AirPlay 2 from an iPhone running IPTV Smarters.
+              </p>
+              <p className="mt-3">
+                <strong className="text-text-primary">Siri Remote quirks:</strong> The 2nd-gen Siri Remote (with the dedicated power button) works seamlessly with all three apps, but the original 1st-gen touch remote can mis-fire when scrubbing the EPG in GSE — use the Apple TV Remote in iOS Control Center for precise channel selection in busy guide views.
               </p>
             </section>
 

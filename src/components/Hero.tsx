@@ -9,10 +9,10 @@ export default function Hero() {
       {/* Decorative hero illustrations — responsive across all breakpoints.
           alt="" + aria-hidden so screen readers skip them. */}
       <div aria-hidden="true" className="pointer-events-none absolute -left-10 top-24 opacity-10 sm:-left-4 sm:top-20 sm:opacity-15 lg:-left-2 lg:top-16 lg:opacity-20 xl:left-0">
-        <Image src="/hero_l_mob.svg" alt="" width={320} height={400} className="h-auto w-[70px] sm:w-[160px] md:w-[200px] lg:w-[260px] xl:w-[320px]" priority />
+        <Image src="/hero_l_mob.svg" alt="" width={320} height={400} className="h-auto w-[70px] sm:w-[160px] md:w-[200px] lg:w-[260px] xl:w-[320px]" loading="lazy" />
       </div>
       <div aria-hidden="true" className="pointer-events-none absolute -right-10 top-24 opacity-10 sm:-right-4 sm:top-20 sm:opacity-15 lg:-right-2 lg:top-16 lg:opacity-20 xl:right-0">
-        <Image src="/hero_r_mob.svg" alt="" width={280} height={400} className="h-auto w-[60px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[280px]" priority />
+        <Image src="/hero_r_mob.svg" alt="" width={280} height={400} className="h-auto w-[60px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[280px]" loading="lazy" />
       </div>
 
       <div className="relative mx-auto max-w-[800px]">
@@ -92,7 +92,6 @@ export default function Hero() {
         {/* Scroll cue — begins the journey */}
         <a
           href="#packages"
-          aria-label="View plans"
           className="group mt-12 inline-flex flex-col items-center gap-2 text-[11px] font-semibold tracking-[2px] uppercase text-text-muted transition-colors hover:text-accent sm:text-[10px] sm:tracking-[3px]"
         >
           <span>Choose your plan</span>

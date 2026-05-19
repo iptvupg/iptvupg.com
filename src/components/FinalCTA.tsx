@@ -12,7 +12,7 @@ export default function FinalCTA() {
             </h2>
 
             <p className="mx-auto mb-8 max-w-[560px] text-[15px] leading-relaxed text-text-secondary">
-              Join 12,000+ subscribers streaming 24,000+ channels in 4K — for less
+              Join 6,000+ subscribers streaming 24,000+ channels in 4K — for less
               than a coffee per week. No credit card. No contract. No risk.
             </p>
 

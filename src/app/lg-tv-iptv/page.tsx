@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     "IPTV on LG TV setup for webOS Smart TVs. Use Smart IPTV, SS IPTV, or IPTV Smarters to stream 24,000+ channels in 4K with IPTV UPG.",
   alternates: {
     canonical: "https://www.iptvupg.com/lg-tv-iptv",
+    languages: {
+      "en": "https://www.iptvupg.com/lg-tv-iptv",
+      "x-default": "https://www.iptvupg.com/lg-tv-iptv",
+    },
   },
   openGraph: {
     title: "IPTV on LG TV: webOS Smart TV Setup Guide 2026",
@@ -265,6 +269,28 @@ export default function LgTvIptv() {
               </h3>
               <p>
                 This is typically an HDMI-CEC or audio output conflict. Go to Settings &gt; All Settings &gt; Sound &gt; Sound Out and make sure the correct output is selected (TV speakers, soundbar, or HDMI ARC). If you see picture but no audio, the channel may use a surround sound codec that your TV speakers cannot decode. Switch the sound output to PCM stereo in the audio settings to resolve this.
+              </p>
+            </section>
+
+            {/* Device-Specific Compatibility */}
+            <section>
+              <h2 className="mb-4 text-xl font-bold text-text-primary">
+                LG Smart TV Hardware Models &amp; webOS Compatibility
+              </h2>
+              <p>
+                LG&apos;s webOS platform has changed significantly between versions, and not every IPTV app from the LG Content Store runs on every webOS generation. Knowing your TV&apos;s webOS version saves troubleshooting time.
+              </p>
+              <ul className="mt-3 list-disc space-y-1.5 pl-6">
+                <li><strong className="text-text-primary">LG OLED C2 / C3 / C4 (2022-2024) — webOS 22/23/24:</strong> α9 Gen 5/6/7 processor, full 4K HDR, supports SS IPTV and Smart IPTV via the LG Content Store; the smoothest IPTV UPG experience on any LG TV.</li>
+                <li><strong className="text-text-primary">LG NanoCell / QNED 2021+ — webOS 6.0+:</strong> Quad-core processors; SS IPTV available, Smart IPTV may require re-licensing if the TV&apos;s MAC address changes.</li>
+                <li><strong className="text-text-primary">LG UHD UM/UN series 2019-2020 — webOS 4.5/5.0:</strong> Apps still install but the LG Content Store has begun rotating older apps out — install before they disappear.</li>
+                <li><strong className="text-text-primary">LG TVs pre-2018 — webOS 3.x and earlier:</strong> Limited app library. Use a Fire Stick or Android TV box plugged into HDMI for a better long-term experience.</li>
+              </ul>
+              <p className="mt-3">
+                <strong className="text-text-primary">webOS app sideloading via Developer Mode:</strong> Unlike Samsung TVs, LG allows webOS Developer Mode (free LG account required). You can sideload .ipk packages such as IPTV Smarters via the LG Webos Dev Manager utility on PC. Developer mode sessions expire after 1000 hours and must be re-enabled — for that reason, most IPTV UPG subscribers stick to LG Content Store apps unless they have a specific need.
+              </p>
+              <p className="mt-3">
+                <strong className="text-text-primary">Magic Remote pointer mode:</strong> Smart IPTV and SS IPTV both work with the Magic Remote pointer, but pointer mode can lag in the channel grid. Press the wheel button to switch to D-pad mode for faster channel switching during sports.
               </p>
             </section>
 

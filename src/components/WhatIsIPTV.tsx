@@ -10,9 +10,13 @@ export default function WhatIsIPTV() {
             <span className="h-px w-8 bg-accent/40" />
             <span>What is IPTV?</span>
           </div>
-          <h2 className="mb-6 text-[clamp(26px,3.6vw,38px)] font-black">
+          <h2 className="mb-4 text-[clamp(26px,3.6vw,38px)] font-black">
             What Is IPTV? A 30-Second Explainer
           </h2>
+          <p className="text-xs text-text-muted">
+            By the IPTV UPG Editorial Team · Last reviewed{" "}
+            <time dateTime="2026-05-19">May 19, 2026</time>
+          </p>
         </div>
 
         <div className="rounded-[20px] border border-border bg-bg-card p-7 shadow-[0_8px_40px_rgba(0,0,0,0.35)] sm:p-10">
