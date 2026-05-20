@@ -365,37 +365,71 @@ export default function IptvFreeTrial() {
         <article className="mx-auto max-w-[920px]">
           {/* Hero */}
           <header className="mb-14 text-center">
+            {/* Trust pill — matches site-wide Hero.tsx pattern */}
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-bg-card/60 px-4 py-2 backdrop-blur-sm">
+              <div className="flex gap-0.5 text-accent">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <span className="text-sm font-semibold text-text-primary">4.9/5</span>
+              <a
+                href="https://www.trustpilot.com/review/iptvupg.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-text-secondary underline-offset-2 transition-colors hover:text-accent hover:underline"
+              >
+                on Trustpilot · 6,620 reviews
+              </a>
+            </div>
             <div className="mb-5 inline-flex items-center gap-3 text-[11px] font-semibold tracking-[3px] uppercase text-accent">
               <span className="font-mono">01</span>
               <span className="h-px w-8 bg-accent/40" />
-              <span>Free IPTV Trial 2026</span>
+              <span>Free Trial</span>
             </div>
             <h1 className="mb-5 text-[clamp(30px,5vw,52px)] leading-[1.1] font-black">
-              IPTV Free Trial —{" "}
-              <span className="text-accent">Test the Best IPTV Service</span>{" "}
-              Free Before You Subscribe
+              Test IPTV UPG <span className="text-accent">Free</span> — No Card,{" "}
+              <span className="whitespace-nowrap">24,000+</span> Channels in 4K
             </h1>
             <p className="mx-auto mb-7 max-w-[680px] text-[15px] leading-relaxed text-text-secondary">
               An <strong className="font-semibold text-text-primary">IPTV free trial</strong> from IPTV UPG gives you full, unrestricted access to <strong className="font-semibold text-text-primary">24,000+ live channels</strong> and <strong className="font-semibold text-text-primary">120,000+ on-demand titles</strong> in true 4K — on Smart TV, Fire TV, Apple TV, Roku, phone, or PC. Zero payment information collected. Activated in minutes via WhatsApp.
             </p>
+            {/* Hero stats — promoted from the §07 KPI block so users see proof above the fold */}
+            <dl className="mx-auto mb-7 grid max-w-[680px] grid-cols-2 gap-4 sm:grid-cols-4">
+              {[
+                { stat: "99.9%", label: "Uptime" },
+                { stat: "1.8s", label: "Channel start" },
+                { stat: "24,000+", label: "Live channels" },
+                { stat: "4.9 / 5", label: "Trustpilot" },
+              ].map((item) => (
+                <div key={item.label} className="rounded-xl border border-border bg-bg-card/60 px-3 py-3">
+                  <dt className="text-lg font-black text-accent">{item.stat}</dt>
+                  <dd className="mt-0.5 text-[11px] leading-snug text-text-secondary">{item.label}</dd>
+                </div>
+              ))}
+            </dl>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5">
               <a
                 href={WHATSAPP_TRIAL_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-xl bg-gradient-to-br from-accent to-accent-dark px-10 py-4 text-sm font-bold tracking-[2px] uppercase text-bg-primary shadow-[0_8px_32px_rgba(201,168,76,0.25)] transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_40px_rgba(201,168,76,0.35)]"
+                aria-label="Get free IPTV trial — opens WhatsApp"
+                className="inline-block rounded-xl bg-gradient-to-br from-accent to-accent-dark px-10 py-4 text-sm font-bold tracking-[2px] uppercase text-bg-primary shadow-[0_8px_32px_rgba(201,168,76,0.25)] transition-all motion-safe:hover:-translate-y-0.5 hover:shadow-[0_12px_40px_rgba(201,168,76,0.35)]"
               >
                 Get Free Trial via WhatsApp
               </a>
               <a
                 href="#tldr"
-                className="rounded-xl border border-border-light px-10 py-4 text-sm font-bold tracking-[1px] uppercase text-text-primary transition-all hover:-translate-y-0.5 hover:border-accent/50"
+                className="rounded-xl border border-border-light px-10 py-4 text-sm font-bold tracking-[1px] uppercase text-text-primary transition-all motion-safe:hover:-translate-y-0.5 hover:border-accent/50"
               >
                 See the 10-Second Answer
               </a>
             </div>
             <p className="mt-4 text-xs text-text-muted">
-              No credit card needed &bull; Credentials in minutes &bull; Full 4K, full EPG, full catalog
+              No credit card needed &bull; Credentials in minutes &bull; WhatsApp{" "}
+              <span className="font-semibold text-text-secondary">+44 7848 197761</span>
             </p>
           </header>
 
@@ -409,14 +443,14 @@ export default function IptvFreeTrial() {
             <h2 className="mb-4 text-[clamp(24px,3.4vw,34px)] font-black leading-tight">
               IPTV Free Trial vs. Free IPTV Apps vs. Cable Trial
             </h2>
-            <p className="mb-6 text-[15px] leading-relaxed text-text-secondary">
+            <p className="mb-6 max-w-[680px] text-[15px] leading-relaxed text-text-secondary">
               An <strong className="font-semibold text-text-primary">IPTV free trial</strong> lets you stream IPTV UPG&apos;s full catalog — 24,000+ live channels and 120,000+ on-demand titles in 4K — for free, before paying. Request via WhatsApp at <strong className="font-semibold text-text-primary">+44 7848 197761</strong>. Credentials arrive in minutes. No credit card. No auto-charge.
             </p>
             <div className="overflow-x-auto rounded-[20px] border border-border bg-bg-card shadow-[0_8px_40px_rgba(0,0,0,0.35)]">
               <table className="w-full border-collapse text-sm">
                 <thead>
                   <tr className="border-b border-border bg-bg-card-hover">
-                    <th className="px-5 py-4 text-left font-semibold text-text-primary">What you want to know</th>
+                    <th className="px-5 py-4 text-left font-semibold text-text-primary">Metric</th>
                     <th className="px-5 py-4 text-left font-bold text-accent">IPTV UPG Free Trial</th>
                     <th className="px-5 py-4 text-left font-semibold text-text-secondary">&quot;Free IPTV&quot; Apps</th>
                     <th className="px-5 py-4 text-left font-semibold text-text-secondary">Cable Free Trial</th>
@@ -424,7 +458,10 @@ export default function IptvFreeTrial() {
                 </thead>
                 <tbody>
                   {tldrRows.map((row, i) => (
-                    <tr key={row.metric} className={i < tldrRows.length - 1 ? "border-b border-border" : ""}>
+                    <tr
+                      key={row.metric}
+                      className={`${i % 2 === 1 ? "bg-bg-card-hover/30" : ""} ${i < tldrRows.length - 1 ? "border-b border-border" : ""}`}
+                    >
                       <td className="px-5 py-3.5 font-semibold text-text-primary">{row.metric}</td>
                       <td className="px-5 py-3.5 text-text-primary">{row.upg}</td>
                       <td className="px-5 py-3.5 text-text-secondary">{row.freeApps}</td>
@@ -455,7 +492,7 @@ export default function IptvFreeTrial() {
               </p>
               <div className="mt-6 rounded-xl border border-accent/30 bg-accent/5 p-5">
                 <h3 className="mb-2 text-xs font-bold tracking-[1.5px] uppercase text-accent">
-                  Definition (40-word AI-Overview block)
+                  Quick definition
                 </h3>
                 <p className="text-sm leading-relaxed text-text-primary">
                   An IPTV free trial is a complimentary, time-limited demonstration of an IPTV (Internet Protocol Television) subscription that gives a user real credentials to stream live channels and on-demand video over the internet, on any compatible device, before purchasing a paid plan.
@@ -500,7 +537,7 @@ export default function IptvFreeTrial() {
             <h2 className="mb-5 text-[clamp(24px,3.4vw,34px)] font-black leading-tight">
               Your IPTV Free Trial: A 7-Day Roadmap
             </h2>
-            <p className="mb-8 max-w-[720px] text-[15px] leading-relaxed text-text-secondary">
+            <p className="mb-8 max-w-[680px] text-[15px] leading-relaxed text-text-secondary">
               Most users start watching within 5 minutes. But to <em>truly evaluate</em> whether an IPTV service is right for you, run this 7-day testing framework. It covers every quality dimension professional reviewers use.
             </p>
             <ol className="relative space-y-5 border-l border-accent/30 pl-6">
@@ -546,7 +583,10 @@ export default function IptvFreeTrial() {
                 </thead>
                 <tbody>
                   {players.map((p, i) => (
-                    <tr key={p.name} className={i < players.length - 1 ? "border-b border-border" : ""}>
+                    <tr
+                      key={p.name}
+                      className={`${i % 2 === 1 ? "bg-bg-card-hover/30" : ""} ${i < players.length - 1 ? "border-b border-border" : ""}`}
+                    >
                       <td className="px-5 py-3.5 font-semibold text-text-primary">{p.name}</td>
                       <td className="px-5 py-3.5 text-text-secondary">{p.best}</td>
                       <td className="px-5 py-3.5">
@@ -606,12 +646,12 @@ export default function IptvFreeTrial() {
             <h2 className="mb-5 text-[clamp(24px,3.4vw,34px)] font-black leading-tight">
               Common Pitfalls & Mistakes to Avoid
             </h2>
-            <p className="mb-8 max-w-[720px] text-[15px] leading-relaxed text-text-secondary">
+            <p className="mb-8 max-w-[680px] text-[15px] leading-relaxed text-text-secondary">
               Honest providers name the risks. Here are the seven mistakes that cause people to mis-judge an IPTV free trial — and how to avoid each one.
             </p>
             <div className="grid gap-4 md:grid-cols-2">
               {pitfalls.map((p) => (
-                <div key={p.n} className="rounded-xl border border-border bg-bg-card p-5 shadow-[0_4px_20px_rgba(0,0,0,0.25)] transition-all hover:-translate-y-1 hover:border-accent/40">
+                <div key={p.n} className="rounded-xl border border-border bg-bg-card p-5 shadow-[0_4px_20px_rgba(0,0,0,0.25)] transition-all motion-safe:hover:-translate-y-1 hover:border-accent/40">
                   <div className="mb-2 font-mono text-[11px] font-semibold tracking-[3px] uppercase text-accent">
                     Mistake {p.n}
                   </div>
@@ -632,7 +672,7 @@ export default function IptvFreeTrial() {
             <h2 className="mb-5 text-[clamp(24px,3.4vw,34px)] font-black leading-tight">
               How to Judge an IPTV Free Trial — 7 KPIs That Matter
             </h2>
-            <p className="mb-6 max-w-[720px] text-[15px] leading-relaxed text-text-secondary">
+            <p className="mb-6 max-w-[680px] text-[15px] leading-relaxed text-text-secondary">
               Use these numeric pass/fail criteria. If 6 of 7 pass, you&apos;ve found the best IPTV service for your needs. If 4 or fewer pass, walk away — and try a different provider.
             </p>
             <div className="overflow-x-auto rounded-2xl border border-border bg-bg-card">
@@ -646,7 +686,10 @@ export default function IptvFreeTrial() {
                 </thead>
                 <tbody>
                   {kpis.map((k, i) => (
-                    <tr key={k.kpi} className={i < kpis.length - 1 ? "border-b border-border" : ""}>
+                    <tr
+                      key={k.kpi}
+                      className={`${i % 2 === 1 ? "bg-bg-card-hover/30" : ""} ${i < kpis.length - 1 ? "border-b border-border" : ""}`}
+                    >
                       <td className="px-5 py-3.5 font-semibold text-text-primary">{k.kpi}</td>
                       <td className="px-5 py-3.5 font-semibold text-accent">{k.pass}</td>
                       <td className="px-5 py-3.5 text-text-secondary">{k.how}</td>
@@ -687,7 +730,7 @@ export default function IptvFreeTrial() {
             <h2 className="mb-5 text-[clamp(24px,3.4vw,34px)] font-black leading-tight">
               Everything Included in Your IPTV Free Trial
             </h2>
-            <p className="mb-6 max-w-[720px] text-[15px] leading-relaxed text-text-secondary">
+            <p className="mb-6 max-w-[680px] text-[15px] leading-relaxed text-text-secondary">
               The free trial gives you unrestricted access to the exact same service that paying subscribers enjoy. No feature limits. No watermarks. No channel restrictions.
             </p>
             <div className="grid gap-3 sm:grid-cols-2">
@@ -721,7 +764,7 @@ export default function IptvFreeTrial() {
             <h2 className="mb-5 text-[clamp(24px,3.4vw,34px)] font-black leading-tight">
               Test the Trial on Any Device You Already Own
             </h2>
-            <p className="mb-6 max-w-[720px] text-[15px] leading-relaxed text-text-secondary">
+            <p className="mb-6 max-w-[680px] text-[15px] leading-relaxed text-text-secondary">
               Your free trial works on every device we support. Test on one, test on two — the trial includes 2 simultaneous connections so you can try multiple devices at the same time.
             </p>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -752,7 +795,7 @@ export default function IptvFreeTrial() {
             <h2 className="mb-5 text-[clamp(24px,3.4vw,34px)] font-black leading-tight">
               What Happens After Your Free Trial?
             </h2>
-            <p className="mb-6 max-w-[720px] text-[15px] leading-relaxed text-text-secondary">
+            <p className="mb-6 max-w-[680px] text-[15px] leading-relaxed text-text-secondary">
               Once your trial ends, there is no automatic billing and no surprise charges. If you enjoyed the service, choose from four IPTV subscription plans — all with a 7-day money-back guarantee for extra peace of mind.
             </p>
             <div className="overflow-x-auto rounded-2xl border border-border bg-bg-card">
@@ -826,7 +869,7 @@ export default function IptvFreeTrial() {
             </h2>
             <div className="grid gap-3 sm:grid-cols-2">
               {relatedArticles.map((r) => (
-                <Link key={r.href} href={r.href} className="group rounded-xl border border-border bg-bg-card px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-accent/40">
+                <Link key={r.href} href={r.href} className="group rounded-xl border border-border bg-bg-card px-5 py-4 transition-all motion-safe:hover:-translate-y-0.5 hover:border-accent/40">
                   <div className="text-sm font-bold text-text-primary group-hover:text-accent">{r.title} →</div>
                   <div className="mt-1 text-xs text-text-muted">{r.note}</div>
                 </Link>
@@ -878,17 +921,16 @@ export default function IptvFreeTrial() {
                 href={WHATSAPP_TRIAL_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-xl bg-gradient-to-br from-accent to-accent-dark px-10 py-4 text-sm font-bold tracking-[2px] uppercase text-bg-primary shadow-[0_8px_32px_rgba(201,168,76,0.25)] transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_40px_rgba(201,168,76,0.35)]"
+                aria-label="Start free trial — opens WhatsApp"
+                className="inline-block rounded-xl bg-gradient-to-br from-accent to-accent-dark px-10 py-4 text-sm font-bold tracking-[2px] uppercase text-bg-primary shadow-[0_8px_32px_rgba(201,168,76,0.25)] transition-all motion-safe:hover:-translate-y-0.5 hover:shadow-[0_12px_40px_rgba(201,168,76,0.35)]"
               >
                 Start Free Trial
               </a>
               <a
-                href={WHATSAPP_TRIAL_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-xl border border-border-light px-10 py-4 text-sm font-bold tracking-[1px] uppercase text-text-primary transition-all hover:-translate-y-0.5 hover:border-accent/50"
+                href="mailto:support@iptvupg.com?subject=IPTV%20Free%20Trial%20Request"
+                className="rounded-xl border border-border-light px-10 py-4 text-sm font-bold tracking-[1px] uppercase text-text-primary transition-all motion-safe:hover:-translate-y-0.5 hover:border-accent/50"
               >
-                Chat on WhatsApp
+                Email Support Instead
               </a>
             </div>
             <p className="mt-5 text-xs text-text-muted">

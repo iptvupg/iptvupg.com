@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { CheckIcon, SmallReelIcon } from "./Icons";
 
 const sharedFeatures = [
@@ -192,25 +191,26 @@ export default function Packages() {
                   ))}
                 </ul>
 
-                {/* CTA — single primary action per card; WhatsApp demoted to text link */}
+                {/* CTA — primary action opens WhatsApp to start the order */}
                 <div className="space-y-2">
-                  <Link
-                    href={plan.slug}
-                    className={`block w-full rounded-xl py-3.5 text-center text-[13px] font-bold tracking-[1.5px] uppercase transition-all hover:-translate-y-0.5 ${
+                  <a
+                    href={`https://wa.me/447848197761?text=${plan.waMsg}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${plan.ctaLabel} — opens WhatsApp`}
+                    className={`block w-full rounded-xl py-3.5 text-center text-[13px] font-bold tracking-[1.5px] uppercase transition-all motion-safe:hover:-translate-y-0.5 ${
                       isBest
                         ? "bg-gradient-to-br from-accent to-accent-dark text-bg-primary shadow-[0_8px_32px_rgba(201,168,76,0.25)] hover:shadow-[0_12px_40px_rgba(201,168,76,0.35)]"
                         : "border-2 border-border-light text-text-primary hover:border-text-primary"
                     }`}
                   >
                     {plan.ctaLabel}
-                  </Link>
+                  </a>
                   <a
-                    href={`https://wa.me/447848197761?text=${plan.waMsg}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={plan.slug}
                     className="block w-full text-center text-[11px] font-medium text-text-secondary transition-colors hover:text-accent"
                   >
-                    Prefer to chat? Order via WhatsApp →
+                    See full plan details →
                   </a>
                 </div>
 
