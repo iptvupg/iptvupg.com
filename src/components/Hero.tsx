@@ -36,7 +36,7 @@ export default function Hero() {
           <span className="whitespace-nowrap text-accent">$7.50</span>/Month
         </h1>
 
-        <p className="mx-auto mb-8 max-w-[680px] text-[15px] leading-relaxed text-text-secondary">
+        <p className="speakable mx-auto mb-8 max-w-[680px] text-[15px] leading-relaxed text-text-secondary">
           IPTV UPG is the <strong className="font-semibold text-text-primary">best IPTV service</strong>{" "}
           for 2026 — a premium IPTV subscription that streams 24,000+ live TV channels and
           120,000+ on-demand movies in 4K/UHD over your internet connection. No cable box,

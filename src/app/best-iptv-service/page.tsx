@@ -291,7 +291,7 @@ const players: { name: string; best: string; href: string; store: string }[] = [
 
 const externalRefs: { label: string; href: string; note: string }[] = [
   { label: "Wikipedia: Internet Protocol television", href: "https://en.wikipedia.org/wiki/Internet_Protocol_television", note: "IPTV technology and architecture overview" },
-  { label: "Trustpilot — IPTV UPG reviews", href: "https://www.trustpilot.com/", note: "Independent customer reviews (4.9/5 across 2,380+ subscribers)" },
+  { label: "Trustpilot — IPTV UPG reviews", href: "https://www.trustpilot.com/review/iptvupg.com", note: "Independent customer reviews (4.9/5 across 2,380+ subscribers)" },
   { label: "Speedtest by Ookla", href: "https://www.speedtest.net/", note: "Verify your bandwidth before subscribing" },
   { label: "Fast.com (Netflix)", href: "https://fast.com/", note: "Second-opinion bandwidth tester" },
 ];

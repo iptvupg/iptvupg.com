@@ -97,6 +97,19 @@ function buildSchema(data: CountryDetail) {
     ],
   };
 
+  const webpage = {
+    "@type": "WebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: `Best IPTV Service in ${data.name} — IPTV UPG`,
+    isPartOf: { "@id": "https://www.iptvupg.com/#website" },
+    publisher: { "@id": "https://www.iptvupg.com/#organization" },
+    breadcrumb: { "@id": `${url}#breadcrumb` },
+    inLanguage: "en",
+    datePublished: "2026-05-01",
+    dateModified: "2026-05-20",
+  };
+
   const service = {
     "@type": "Service",
     "@id": `${url}#service`,
@@ -142,7 +155,7 @@ function buildSchema(data: CountryDetail) {
         name: `What does IPTV cost in ${data.name}?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `IPTV UPG starts at $7.50/month with no contract. Annual plans drop to roughly $3.75/month. The same login works on every device you own.`,
+          text: `IPTV UPG starts at $16/month month-to-month. The annual plan works out to $7.50/month ($90/year) — a 53% saving versus monthly billing. The same login works on every device you own.`,
         },
       },
       {
@@ -158,7 +171,7 @@ function buildSchema(data: CountryDetail) {
         name: `Will it work on my TV in ${data.name}?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `IPTV UPG works on Samsung and LG Smart TVs (Tizen and webOS), Android TV boxes, Apple TV, Amazon Fire TV, Roku where IPTV apps are available, MAG boxes, plus phones, tablets and computers. One subscription covers up to 5 connections.`,
+          text: `IPTV UPG works on Samsung and LG Smart TVs (Tizen and webOS), Android TV boxes, Apple TV, Amazon Fire TV, Roku where IPTV apps are available, MAG boxes, plus phones, tablets and computers. One subscription covers 2 simultaneous streams.`,
         },
       },
     ],
@@ -166,7 +179,7 @@ function buildSchema(data: CountryDetail) {
 
   return {
     "@context": "https://schema.org",
-    "@graph": [breadcrumb, service, faq],
+    "@graph": [webpage, breadcrumb, service, faq],
   };
 }
 
@@ -296,7 +309,7 @@ export default async function CountryPage({ params }: RouteProps) {
               <ul className="list-disc space-y-2 pl-6">
                 <li>
                   <strong className="text-text-primary">One subscription, every screen.</strong>{" "}
-                  Up to 5 simultaneous connections covering Fire TV, Apple TV, Android, iOS, Samsung and LG Smart TVs, MAG, and PC.
+                  Works on every device you own — Fire TV, Apple TV, Android, iOS, Samsung and LG Smart TVs, MAG box, and PC. 2 simultaneous streams per subscription.
                 </li>
                 <li>
                   <strong className="text-text-primary">4K HDR where available.</strong>{" "}
