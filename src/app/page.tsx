@@ -55,6 +55,11 @@ const structuredData = {
           { "@type": "Language", name: "Romanian" },
         ],
       },
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "GB",
+      },
+      foundingDate: "2020-01-01",
       sameAs: [
         "https://twitter.com/iptvupg",
         "https://instagram.com/iptvupg",
@@ -73,8 +78,18 @@ const structuredData = {
       name: "IPTV UPG",
       alternateName: "IPTVUPG",
       url: "https://www.iptvupg.com",
+      inLanguage: "en",
       publisher: {
         "@id": "https://www.iptvupg.com/#organization",
+      },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate:
+            "https://www.iptvupg.com/?s={search_term_string}",
+        },
+        "query-input": "required name=search_term_string",
       },
     },
 
@@ -105,12 +120,21 @@ const structuredData = {
       },
     },
 
-    /* ── SPEAKABLE — voice-assistant paragraph selection ──────────────── */
+    /* ── WEBPAGE — voice-assistant paragraph selection + page identity ── */
     {
       "@type": "WebPage",
       "@id": "https://www.iptvupg.com/#webpage",
       url: "https://www.iptvupg.com",
+      name: "Best IPTV Service in 2026 — IPTV UPG | 24,000+ Channels in 4K from $7.50/mo",
+      description:
+        "IPTV UPG is a premium IPTV service streaming 24,000+ live channels and 120,000+ movies in 4K. Plans from $7.50/month, 7-day money-back guarantee, instant activation, works on every device.",
       isPartOf: { "@id": "https://www.iptvupg.com/#website" },
+      about: { "@id": "https://www.iptvupg.com/#service" },
+      primaryImageOfPage: { "@id": "https://www.iptvupg.com/#logo" },
+      breadcrumb: { "@id": "https://www.iptvupg.com/#breadcrumb" },
+      datePublished: "2024-01-01",
+      dateModified: "2026-05-19",
+      inLanguage: "en",
       speakable: {
         "@type": "SpeakableSpecification",
         cssSelector: ["h1", ".speakable"],
@@ -239,8 +263,10 @@ const structuredData = {
       review: [
         {
           "@type": "Review",
+          name: "IPTV UPG just works",
           author: { "@type": "Person", name: "Oliver" },
           datePublished: "2026-03-15",
+          itemReviewed: { "@id": "https://www.iptvupg.com/#product" },
           reviewRating: {
             "@type": "Rating",
             ratingValue: "5",
@@ -252,8 +278,10 @@ const structuredData = {
         },
         {
           "@type": "Review",
+          name: "Great IPTV service",
           author: { "@type": "Person", name: "Henry" },
           datePublished: "2026-03-18",
+          itemReviewed: { "@id": "https://www.iptvupg.com/#product" },
           reviewRating: {
             "@type": "Rating",
             ratingValue: "5",
@@ -264,8 +292,10 @@ const structuredData = {
         },
         {
           "@type": "Review",
+          name: "Streaming perfectly",
           author: { "@type": "Person", name: "Adeline" },
           datePublished: "2026-03-20",
+          itemReviewed: { "@id": "https://www.iptvupg.com/#product" },
           reviewRating: {
             "@type": "Rating",
             ratingValue: "5",
@@ -277,8 +307,10 @@ const structuredData = {
         },
         {
           "@type": "Review",
+          name: "Will recommend",
           author: { "@type": "Person", name: "Harper" },
           datePublished: "2026-03-22",
+          itemReviewed: { "@id": "https://www.iptvupg.com/#product" },
           reviewRating: {
             "@type": "Rating",
             ratingValue: "5",
@@ -290,8 +322,10 @@ const structuredData = {
         },
         {
           "@type": "Review",
+          name: "Recommended to everyone",
           author: { "@type": "Person", name: "Nicole" },
           datePublished: "2026-03-25",
+          itemReviewed: { "@id": "https://www.iptvupg.com/#product" },
           reviewRating: {
             "@type": "Rating",
             ratingValue: "5",
@@ -495,9 +529,9 @@ export default function Home() {
         <WhatIsIPTV />
         <Packages />
         <HowItWorks />
+        <DeviceSection />
         <Reviews />
         <FAQ />
-        <DeviceSection />
         <FinalCTA />
       </main>
       <Footer />

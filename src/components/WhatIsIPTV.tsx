@@ -10,8 +10,8 @@ export default function WhatIsIPTV() {
             <span className="h-px w-8 bg-accent/40" />
             <span>What is IPTV?</span>
           </div>
-          <h2 className="mb-4 text-[clamp(26px,3.6vw,38px)] font-black">
-            What Is IPTV? A 30-Second Explainer
+          <h2 className="mb-4 text-[clamp(28px,4vw,42px)] font-black">
+            What Is IPTV?
           </h2>
           <p className="text-xs text-text-muted">
             By the IPTV UPG Editorial Team · Last reviewed{" "}
@@ -19,21 +19,17 @@ export default function WhatIsIPTV() {
           </p>
         </div>
 
-        <div className="rounded-[20px] border border-border bg-bg-card p-7 shadow-[0_8px_40px_rgba(0,0,0,0.35)] sm:p-10">
+        <div className="rounded-[20px] border border-border/60 bg-bg-card/40 p-7 sm:p-10">
           <p className="text-[15px] leading-relaxed text-text-secondary">
             <strong className="font-semibold text-text-primary">IPTV</strong>{" "}
-            (Internet Protocol Television) is a method of streaming live TV channels
-            and on-demand video over the internet instead of through cable, satellite,
-            or terrestrial signals. With the{" "}
-            <strong className="font-semibold text-text-primary">best IPTV service</strong>{" "}
-            of 2026 —{" "}
-            <strong className="font-semibold text-text-primary">IPTV UPG</strong> — you
-            get the same live sports, news, movies, and international channels you&apos;d
-            get from cable, but delivered in 4K on any device (Smart TV, phone, Fire
-            Stick, Apple TV) for up to{" "}
-            <span className="font-semibold text-accent">80% less</span> than a
-            traditional cable bill. Setup takes under a minute: subscribe, install a
-            free IPTV player, log in, and start watching.
+            (Internet Protocol Television) is TV delivered over the internet, instead
+            of cable, satellite, or an antenna. Modern{" "}
+            <strong className="font-semibold text-text-primary">IPTV services</strong>{" "}
+            like IPTV UPG give you the same live sports, news, movies, and international
+            channels you&apos;d get from cable, in 4K on a device you already own
+            (Smart TV, phone, Fire Stick, Apple TV). Most subscribers pay roughly{" "}
+            <span className="font-semibold text-accent">80% less</span> than they used
+            to. Subscribe, install a free IPTV player, log in, watch.
           </p>
 
           <div className="mt-7 border-t border-border pt-6">

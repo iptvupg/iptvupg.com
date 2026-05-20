@@ -340,10 +340,10 @@ export default async function CountryPage({ params }: RouteProps) {
               </p>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 {[
-                  { plan: "1 Month", price: "$15.00", href: "/1-month-iptv-subscription" },
-                  { plan: "3 Months", price: "$25.00", href: "/3-months-iptv-subscription" },
-                  { plan: "6 Months", price: "$35.00", href: "/6-months-iptv-subscription" },
-                  { plan: "12 Months", price: "$45.00", href: "/12-months-iptv-subscription" },
+                  { plan: "1 Month", price: "$16.00", href: "/1-month-iptv-subscription" },
+                  { plan: "3 Months", price: "$39.00", href: "/3-months-iptv-subscription" },
+                  { plan: "6 Months", price: "$60.00", href: "/6-months-iptv-subscription" },
+                  { plan: "12 Months", price: "$90.00", href: "/12-months-iptv-subscription" },
                 ].map((p) => (
                   <Link
                     key={p.plan}
@@ -477,8 +477,6 @@ export default async function CountryPage({ params }: RouteProps) {
         </article>
       </main>
       <Footer />
-      {/* Canonical exposed for crawlers that only read the URL block */}
-      <link rel="canonical" href={url} />
     </>
   );
 }

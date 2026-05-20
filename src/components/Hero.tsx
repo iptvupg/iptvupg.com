@@ -1,19 +1,21 @@
-import Image from "next/image";
-import Link from "next/link";
-
 export default function Hero() {
   return (
     <section className="relative overflow-hidden px-6 pt-32 pb-16 text-center">
+      {/* Background video — muted, looping, auto-playing. Hidden when reduced-motion is preferred. */}
+      <video
+        aria-hidden="true"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
+      >
+        <source src="/hero-bg.webm" type="video/webm" />
+      </video>
+      {/* Scrim — darkens video so text remains legible. */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-bg-primary/40 via-bg-primary/20 to-bg-primary" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center_top,rgba(201,168,76,0.04)_0%,transparent_60%)]" />
-
-      {/* Decorative hero illustrations — responsive across all breakpoints.
-          alt="" + aria-hidden so screen readers skip them. */}
-      <div aria-hidden="true" className="pointer-events-none absolute -left-10 top-24 opacity-10 sm:-left-4 sm:top-20 sm:opacity-15 lg:-left-2 lg:top-16 lg:opacity-20 xl:left-0">
-        <Image src="/hero_l_mob.svg" alt="" width={320} height={400} className="h-auto w-[70px] sm:w-[160px] md:w-[200px] lg:w-[260px] xl:w-[320px]" loading="lazy" />
-      </div>
-      <div aria-hidden="true" className="pointer-events-none absolute -right-10 top-24 opacity-10 sm:-right-4 sm:top-20 sm:opacity-15 lg:-right-2 lg:top-16 lg:opacity-20 xl:right-0">
-        <Image src="/hero_r_mob.svg" alt="" width={280} height={400} className="h-auto w-[60px] sm:w-[140px] md:w-[180px] lg:w-[220px] xl:w-[280px]" loading="lazy" />
-      </div>
 
       <div className="relative mx-auto max-w-[800px]">
         {/* Rating badge */}
@@ -26,21 +28,29 @@ export default function Hero() {
             ))}
           </div>
           <span className="text-sm font-semibold text-text-primary">4.9/5</span>
-          <span className="text-xs text-text-secondary">Average Rating</span>
+          <a
+            href="https://www.trustpilot.com/review/iptvupg.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-text-secondary underline-offset-2 transition-colors hover:text-accent hover:underline"
+          >
+            on Trustpilot
+          </a>
         </div>
 
         <h1 className="mb-6 text-[clamp(28px,5vw,52px)] leading-[1.1] font-black">
           Best IPTV Service in 2026 —{" "}
-          <span className="whitespace-nowrap text-accent">24,000+</span> Live Channels in{" "}
-          <span className="whitespace-nowrap text-accent">4K</span>, From{" "}
+          <span className="whitespace-nowrap">24,000+</span> Live Channels in
+          4K, From{" "}
           <span className="whitespace-nowrap text-accent">$7.50</span>/Month
         </h1>
 
         <p className="speakable mx-auto mb-8 max-w-[680px] text-[15px] leading-relaxed text-text-secondary">
-          IPTV UPG is the <strong className="font-semibold text-text-primary">best IPTV service</strong>{" "}
-          for 2026 — a premium IPTV subscription that streams 24,000+ live TV channels and
-          120,000+ on-demand movies in 4K/UHD over your internet connection. No cable box,
-          no contract, no buffering. Activated in under 60 seconds on any device you already own.
+          <strong className="font-semibold text-text-primary">IPTV UPG</strong>{" "}
+          is an <strong className="font-semibold text-text-primary">IPTV service</strong>{" "}
+          streaming 24,000+ live channels and 120,000+ movies in 4K. One subscription
+          covers every device. No cable box. No contract. You&apos;re watching in about
+          a minute.
         </p>
 
         <div className="mb-6 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5">
@@ -50,7 +60,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="inline-block rounded-xl bg-gradient-to-br from-accent to-accent-dark px-10 py-4 text-sm font-bold tracking-[2px] uppercase text-bg-primary shadow-[0_8px_32px_rgba(201,168,76,0.25)] transition-all motion-safe:hover:-translate-y-0.5 hover:shadow-[0_12px_40px_rgba(201,168,76,0.35)]"
           >
-            Start Your Free Trial
+            Start Free Trial
           </a>
           <a
             href="#packages"
@@ -60,45 +70,9 @@ export default function Hero() {
           </a>
         </div>
 
-        <p className="mb-3 text-xs text-text-muted">
+        <p className="text-xs text-text-muted">
           No credit card needed &bull; Activated in 60 seconds &bull; 7-day money-back guarantee
         </p>
-
-        <p className="mb-8 text-xs">
-          <Link
-            href="/best-iptv-service"
-            className="font-semibold text-text-muted transition-colors hover:text-accent"
-          >
-            See why we&apos;re rated the best IPTV service in 2026 →
-          </Link>
-        </p>
-
-        {/* Trust badges */}
-        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-10">
-          {[
-            { label: "99.9% Uptime — Verified", icon: <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg> },
-            { label: "Full EPG Included", icon: <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}><rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="3" y="14" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /></svg> },
-            { label: "True 4K HDR", icon: <span className="text-xs font-black">4K</span> },
-          ].map((b) => (
-            <div key={b.label} className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent/10 text-accent">
-                {b.icon}
-              </div>
-              <span className="text-sm font-semibold">{b.label}</span>
-            </div>
-          ))}
-        </div>
-
-        {/* Scroll cue — begins the journey */}
-        <a
-          href="#packages"
-          className="group mt-12 inline-flex flex-col items-center gap-2 text-[11px] font-semibold tracking-[2px] uppercase text-text-muted transition-colors hover:text-accent sm:text-[10px] sm:tracking-[3px]"
-        >
-          <span>Choose your plan</span>
-          <span className="flex h-9 w-[1px] overflow-hidden bg-border-light">
-            <span className="h-3 w-full animate-[float_2.4s_ease-in-out_infinite] bg-accent" />
-          </span>
-        </a>
       </div>
     </section>
   );

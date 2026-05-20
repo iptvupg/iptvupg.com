@@ -323,7 +323,7 @@ export default function AndroidIptv() {
                 Start Streaming on Android Today
               </h2>
               <p>
-                Join thousands of satisfied IPTV UPG subscribers. Get access to 24,000+ channels and 120,000+ VOD titles on your Android phone, tablet, or TV box.
+                Join 6,000+ satisfied IPTV UPG subscribers. Get access to 24,000+ channels and 120,000+ VOD titles on your Android phone, tablet, or TV box.
               </p>
               <p className="mt-2 text-xs text-text-muted">
                 All plans include a{" "}

@@ -68,7 +68,7 @@ const nextConfig: NextConfig = {
                 {
                   key: "Content-Security-Policy",
                   value:
-                    "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+                    "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
                 },
               ]
             : []),
@@ -109,9 +109,9 @@ const nextConfig: NextConfig = {
           },
         ],
       },
-      // AI crawler-friendly headers for llms.txt
+      // AI crawler-friendly headers for llms.txt and llms-full.txt
       {
-        source: "/llms.txt",
+        source: "/:file(llms\\.txt|llms-full\\.txt)",
         headers: [
           {
             key: "Cache-Control",

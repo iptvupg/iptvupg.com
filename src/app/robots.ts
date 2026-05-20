@@ -63,6 +63,24 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/api/", "/upload-reviews"],
       },
+      // OpenAI ChatGPT browse-mode user agent (distinct from GPTBot training crawler).
+      {
+        userAgent: "ChatGPT-User",
+        allow: "/",
+        disallow: ["/api/", "/upload-reviews"],
+      },
+      // Anthropic Claude web fetcher.
+      {
+        userAgent: "anthropic-ai",
+        allow: "/",
+        disallow: ["/api/", "/upload-reviews"],
+      },
+      // Cohere training crawler.
+      {
+        userAgent: "cohere-ai",
+        allow: "/",
+        disallow: ["/api/", "/upload-reviews"],
+      },
     ],
     sitemap: "https://www.iptvupg.com/sitemap.xml",
   };

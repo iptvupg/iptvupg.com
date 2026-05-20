@@ -30,8 +30,7 @@ export default function HowItWorks() {
             Start Streaming in 3 Simple Steps
           </h2>
           <p className="mx-auto max-w-[520px] text-[15px] text-text-secondary">
-            From checkout to live sports in under 5 minutes. No installer, no
-            equipment, no cable guy.
+            Checkout to live sports in about five minutes. Nobody comes to your house.
           </p>
         </div>
 

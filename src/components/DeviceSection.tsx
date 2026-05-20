@@ -73,7 +73,7 @@ export default function DeviceSection() {
       <div className="mx-auto max-w-[1000px]">
         <div className="mb-14 text-center">
           <div className="mb-5 inline-flex items-center gap-3 text-[11px] font-semibold tracking-[3px] uppercase text-accent">
-            <span className="font-mono">06</span>
+            <span className="font-mono">04</span>
             <span className="h-px w-8 bg-accent/40" />
             <span>Works on Every Device</span>
           </div>
@@ -81,11 +81,11 @@ export default function DeviceSection() {
             IPTV on Any Device — Smart TV, Phone, Fire Stick, Apple TV &amp; More
           </h2>
           <p className="mx-auto max-w-[620px] text-[15px] text-text-secondary">
-            One IPTV subscription, every screen. IPTV UPG runs on Samsung &amp; LG
-            Smart TVs, Amazon Fire TV, Apple TV, Roku, Android, iPhone, MAG boxes,
-            Mac, and Windows.{" "}
+            One IPTV subscription, every screen. As an IPTV 4K supplier we stream to
+            Samsung and LG smart TVs, Amazon Fire TV, Apple TV, Roku, Android, iPhone,
+            MAG boxes, Mac, and Windows.{" "}
             <strong className="font-semibold text-text-primary">
-              No new hardware. No installer. No cable guy.
+              You don&apos;t need new hardware.
             </strong>
           </p>
         </div>

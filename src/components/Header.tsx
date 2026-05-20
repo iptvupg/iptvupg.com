@@ -39,30 +39,30 @@ export default function Header() {
         <Link href="/" className="text-[22px] font-black tracking-[2px] text-text-primary">
           IPTV <span className="text-accent">UPG</span>
         </Link>
-        <div className="hidden items-center gap-6 lg:flex">
-          <a href="/#packages" className="text-sm font-medium text-text-secondary transition-colors hover:text-accent">
+        <div className="hidden items-center gap-1 md:flex">
+          <a href="/#packages" className="inline-flex min-h-[44px] items-center rounded-md px-3 text-sm font-medium text-text-secondary transition-colors hover:text-accent">
             Plans
           </a>
-          <Link href="/best-iptv-service" className="text-sm font-medium text-text-secondary transition-colors hover:text-accent">
+          <Link href="/best-iptv-service" className="inline-flex min-h-[44px] items-center rounded-md px-3 text-sm font-medium text-text-secondary transition-colors hover:text-accent">
             Why Us
           </Link>
-          <Link href="/iptv-free-trial" className="text-sm font-medium text-text-secondary transition-colors hover:text-accent">
+          <Link href="/iptv-free-trial" className="inline-flex min-h-[44px] items-center rounded-md px-3 text-sm font-medium text-text-secondary transition-colors hover:text-accent">
             Free Trial
           </Link>
-          <Link href="/what-is-iptv" className="text-sm font-medium text-text-secondary transition-colors hover:text-accent">
+          <Link href="/what-is-iptv" className="inline-flex min-h-[44px] items-center rounded-md px-3 text-sm font-medium text-text-secondary transition-colors hover:text-accent">
             Guide
           </Link>
-          <a href="/#reviews" className="text-sm font-medium text-text-secondary transition-colors hover:text-accent">
+          <a href="/#reviews" className="inline-flex min-h-[44px] items-center rounded-md px-3 text-sm font-medium text-text-secondary transition-colors hover:text-accent">
             Reviews
           </a>
-          <a href="/#faq" className="text-sm font-medium text-text-secondary transition-colors hover:text-accent">
+          <a href="/#faq" className="inline-flex min-h-[44px] items-center rounded-md px-3 text-sm font-medium text-text-secondary transition-colors hover:text-accent">
             FAQ
           </a>
           <a
             href="https://wa.me/447848197761?text=Hi%2C%20I%20would%20like%20to%20request%20a%20free%20IPTV%20trial"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-black transition hover:opacity-90"
+            className="ml-2 inline-flex min-h-[44px] items-center rounded-full border border-accent/60 bg-transparent px-5 text-sm font-semibold text-accent transition hover:border-accent hover:bg-accent hover:text-black"
           >
             Start Free Trial
           </a>
@@ -74,7 +74,7 @@ export default function Header() {
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
-          className="flex min-h-[44px] min-w-[44px] flex-col items-center justify-center gap-[5px] lg:hidden"
+          className="flex min-h-[44px] min-w-[44px] flex-col items-center justify-center gap-[5px] md:hidden"
           onClick={() => setMenuOpen((prev) => !prev)}
         >
           <span className="block h-[2px] w-6 bg-text-primary transition-all" />
@@ -90,7 +90,7 @@ export default function Header() {
           role="dialog"
           aria-modal="true"
           aria-label="Main menu"
-          className="fixed inset-0 z-50 flex flex-col bg-bg-primary lg:hidden"
+          className="fixed inset-0 z-50 flex flex-col bg-bg-primary md:hidden"
         >
           <div className="flex items-center justify-between px-6 py-5">
             <Link

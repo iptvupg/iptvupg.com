@@ -14,7 +14,7 @@ export default function Reviews() {
       <div className="mx-auto max-w-[1200px]">
         <div className="mb-14 text-center">
           <div className="mb-5 inline-flex items-center gap-3 text-[11px] font-semibold tracking-[3px] uppercase text-accent">
-            <span className="font-mono">04</span>
+            <span className="font-mono">05</span>
             <span className="h-px w-8 bg-accent/40" />
             <span>Trusted by 6,000+ Customers</span>
           </div>
@@ -22,8 +22,8 @@ export default function Reviews() {
             Why Customers Rate IPTV UPG the Best IPTV Service of 2026
           </h2>
           <p className="mx-auto mb-3 max-w-[560px] text-[15px] text-text-secondary">
-            Real WhatsApp conversations from real subscribers in 47 countries. Every
-            screenshot is verified — no stock photos, no paid testimonials.
+            WhatsApp messages from real IPTV subscribers in 47 countries. Screenshots
+            aren&apos;t staged. Nobody was paid.
           </p>
           <div className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/5 px-4 py-1.5 text-xs font-semibold text-accent">
             <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">

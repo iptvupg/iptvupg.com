@@ -12,8 +12,8 @@ export default function FinalCTA() {
             </h2>
 
             <p className="mx-auto mb-8 max-w-[560px] text-[15px] leading-relaxed text-text-secondary">
-              Join 6,000+ subscribers streaming 24,000+ channels in 4K — for less
-              than a coffee per week. No credit card. No contract. No risk.
+              Over 6,000 subscribers chose us over other IPTV services and are streaming
+              24,000+ channels in 4K for less than a weekly coffee. No card. No contract.
             </p>
 
             <div className="mb-6 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5">
@@ -23,7 +23,7 @@ export default function FinalCTA() {
                 rel="noopener noreferrer"
                 className="inline-block rounded-xl bg-gradient-to-br from-accent to-accent-dark px-9 py-4 text-sm font-bold tracking-[2px] uppercase text-bg-primary shadow-[0_8px_32px_rgba(201,168,76,0.25)] transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_40px_rgba(201,168,76,0.35)]"
               >
-                Start Free Trial →
+                Start Free Trial
               </a>
               <a
                 href="/12-months-iptv-subscription"

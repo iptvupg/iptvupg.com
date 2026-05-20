@@ -9,7 +9,6 @@ const sharedFeatures = [
   "99.9% Server Uptime",
   "2 Device Connections",
   "24/7 Customer Support",
-  "Instant Activation",
 ];
 
 type Plan = {
@@ -101,13 +100,10 @@ export default function Packages() {
             IPTV Subscription Plans — From $7.50/Month, Cancel Anytime
           </h2>
           <p className="mx-auto mb-4 max-w-[560px] text-[15px] text-text-secondary">
-            Every plan unlocks the full library: 24,000+ channels, 120,000+ movies,
-            4K streaming, 2 simultaneous connections, and 24/7 support.
-            <strong className="font-semibold text-text-primary"> Save 53% with the Annual Plan.</strong>
+            Every IPTV subscription gets you the full library: 24,000+ channels,
+            120,000+ movies in 4K, two devices at once, 24/7 support.
+            <strong className="font-semibold text-text-primary"> The annual plan works out 53% cheaper per month.</strong>
           </p>
-          <div className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/5 px-4 py-1.5 text-xs font-semibold text-accent">
-            SAVE 53% — Annual Plan only $7.50/month
-          </div>
         </div>
 
         {/* Cards grid */}
@@ -159,7 +155,7 @@ export default function Packages() {
                 </div>
 
                 {/* Period */}
-                <div className="mb-2 text-center text-xs text-text-muted">
+                <div className="mb-2 text-center text-xs text-text-secondary">
                   {plan.period}
                 </div>
 
@@ -171,19 +167,16 @@ export default function Packages() {
                     </div>
                   )}
                   {plan.saveLine && (
-                    <div className="mt-1 text-center text-[11px] font-semibold tracking-wider uppercase text-text-muted">
+                    <div className="mt-1 text-center text-[11px] font-semibold tracking-wider uppercase text-text-secondary">
                       {plan.saveLine}
                     </div>
                   )}
                 </div>
 
-                {/* Features */}
+                {/* Features list — shared features in every plan, plus plan-unique extras highlighted in accent */}
                 <ul className="mb-6 flex-1 space-y-2">
                   {sharedFeatures.map((f) => (
-                    <li
-                      key={f}
-                      className="flex items-center gap-2.5 text-[13px] text-text-secondary"
-                    >
+                    <li key={f} className="flex items-center gap-2.5 text-[13px] text-text-secondary">
                       <CheckIcon className="h-4 w-4 shrink-0 text-accent" />
                       {f}
                     </li>
@@ -199,8 +192,8 @@ export default function Packages() {
                   ))}
                 </ul>
 
-                {/* CTA Buttons */}
-                <div className="space-y-2.5">
+                {/* CTA — single primary action per card; WhatsApp demoted to text link */}
+                <div className="space-y-2">
                   <Link
                     href={plan.slug}
                     className={`block w-full rounded-xl py-3.5 text-center text-[13px] font-bold tracking-[1.5px] uppercase transition-all hover:-translate-y-0.5 ${
@@ -215,9 +208,9 @@ export default function Packages() {
                     href={`https://wa.me/447848197761?text=${plan.waMsg}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full rounded-xl border border-border bg-bg-card-hover/50 py-2.5 text-center text-[11px] font-semibold text-text-secondary transition-all hover:text-accent"
+                    className="block w-full text-center text-[11px] font-medium text-text-secondary transition-colors hover:text-accent"
                   >
-                    Buy via WhatsApp
+                    Prefer to chat? Order via WhatsApp →
                   </a>
                 </div>
 
@@ -225,7 +218,7 @@ export default function Packages() {
                 <div className="mt-4 text-center">
                   <a
                     href="/refund"
-                    className="text-[10px] font-medium tracking-wider uppercase text-text-muted transition-colors hover:text-accent"
+                    className="text-[10px] font-medium tracking-wider uppercase text-text-secondary transition-colors hover:text-accent"
                   >
                     7-Day Money-Back Guarantee
                   </a>

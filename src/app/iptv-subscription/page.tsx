@@ -293,8 +293,9 @@ export default function IPTVSubscriptionPage() {
               </p>
             </div>
 
-            <div className="overflow-x-auto rounded-2xl border border-border bg-bg-card shadow-[0_8px_40px_rgba(0,0,0,0.35)]">
-              <table className="w-full min-w-[680px] text-left text-sm">
+            {/* Desktop: side-by-side table (md and up) */}
+            <div className="hidden rounded-2xl border border-border bg-bg-card shadow-[0_8px_40px_rgba(0,0,0,0.35)] md:block">
+              <table className="w-full text-left text-sm">
                 <thead className="border-b border-border bg-bg-card-hover/40 text-[11px] font-bold tracking-[1.5px] uppercase text-text-muted">
                   <tr>
                     <th scope="col" className="px-6 py-4">Plan</th>
@@ -326,6 +327,35 @@ export default function IPTVSubscriptionPage() {
                 </tbody>
               </table>
             </div>
+
+            {/* Mobile: stacked cards (below md) — no horizontal swipe */}
+            <ul className="grid gap-4 md:hidden" aria-label="IPTV subscription comparison">
+              {comparisonRows.map((row) => (
+                <li
+                  key={row.plan}
+                  className="rounded-2xl border border-border bg-bg-card p-5 shadow-[0_4px_20px_rgba(0,0,0,0.25)]"
+                >
+                  <div className="mb-3 flex items-baseline justify-between gap-3">
+                    <h3 className="text-base font-bold text-text-primary">{row.plan}</h3>
+                    <span className="text-sm font-semibold">{row.price}</span>
+                  </div>
+                  <dl className="mb-4 grid grid-cols-2 gap-x-4 gap-y-2 text-[13px]">
+                    <dt className="text-text-muted">Per month</dt>
+                    <dd className="text-right font-semibold text-accent">{row.perMonth}</dd>
+                    <dt className="text-text-muted">Savings</dt>
+                    <dd className="text-right text-text-secondary">{row.save}</dd>
+                    <dt className="text-text-muted">Best for</dt>
+                    <dd className="text-right text-text-secondary">{row.bestFor}</dd>
+                  </dl>
+                  <Link
+                    href={row.href}
+                    className="inline-flex min-h-[44px] items-center text-xs font-bold tracking-[1.5px] uppercase text-accent transition-colors hover:text-text-primary"
+                  >
+                    {row.cta} →
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 

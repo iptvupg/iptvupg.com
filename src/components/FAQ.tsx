@@ -6,11 +6,11 @@ const linkClass = "font-semibold text-accent hover:underline";
 const faqs: { q: string; a: React.ReactNode }[] = [
   {
     q: "What is IPTV and how does it differ from cable?",
-    a: "IPTV (Internet Protocol Television) streams live TV channels and on-demand content over your internet connection instead of through coaxial cable or satellite. Unlike cable — which charges $80–$120/month for 150–300 channels — IPTV providers like IPTV UPG deliver 24,000+ channels starting at $7.50/month, in 4K, with no installation, no equipment rental, and no contract. You watch on devices you already own: Smart TV, Fire Stick, Apple TV, Roku, phone, or laptop. A full EPG (Electronic Program Guide) is included so you can browse channels exactly like cable.",
+    a: "IPTV (Internet Protocol Television) streams live TV and on-demand video over your internet connection, instead of through coaxial cable or satellite. Cable charges $80 to $120 a month for 150 to 300 channels. IPTV providers like IPTV UPG charge $7.50 a month for 24,000+ channels in 4K, with no install, no equipment rental, no contract. Watch on a device you already own (Smart TV, Fire Stick, Apple TV, Roku, phone, laptop). A full Electronic Program Guide is built in, so browsing channels feels like cable.",
   },
   {
     q: "What makes IPTV UPG the best IPTV service in 2026?",
-    a: "Three measurable advantages: (1) Channel count — 24,000+ live channels and 120,000+ on-demand titles, the largest verified catalog among major IPTV providers. (2) Quality — true 4K/UHD with anti-freeze adaptive bitrate technology and 99.9% verified uptime. (3) Price — plans from $7.50/month with a 7-day money-back guarantee, instant activation, and no contracts. Independent users rate IPTV UPG 4.9/5 on Trustpilot. Every plan includes 2 simultaneous device connections and 24/7 support — the same features competitors charge double for.",
+    a: "Three numbers you can verify. Catalog: 24,000+ live channels and 120,000+ on-demand titles, the largest among the major IPTV suppliers we benchmarked through Q1 2026. Quality: IPTV 4K with adaptive bitrate and 99.9% uptime. Price: $7.50 a month with instant activation and a 7-day refund. Trustpilot rates IPTV UPG 4.9/5. Two devices and 24/7 support come standard with every plan, which most IPTV services charge extra for.",
   },
   {
     q: "Is there a free IPTV trial?",
@@ -53,7 +53,7 @@ export default function FAQ() {
         <div className="mb-16 flex flex-col gap-10 lg:flex-row">
           <div>
             <div className="mb-5 inline-flex items-center gap-3 text-[11px] font-semibold tracking-[3px] uppercase text-accent">
-              <span className="font-mono">05</span>
+              <span className="font-mono">06</span>
               <span className="h-px w-8 bg-accent/40" />
               <span>Got Questions?</span>
             </div>
@@ -77,6 +77,7 @@ export default function FAQ() {
           {faqs.map((faq, i) => (
             <details
               key={i}
+              open={i < 2}
               className="group overflow-hidden rounded-2xl border border-border bg-bg-card shadow-[0_4px_20px_rgba(0,0,0,0.25)] transition-all open:border-dashed open:border-border-light"
             >
               <summary className="flex w-full cursor-pointer items-center gap-4 px-6 py-5 text-left transition-colors hover:bg-bg-card-hover [&::-webkit-details-marker]:hidden list-none">
